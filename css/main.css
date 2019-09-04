@@ -1,11 +1,11 @@
-/* font-family: 'Roboto', sans-serif;
-font-family: 'Montserrat', sans-serif; */
-
 :root {
     --blanco: #fff;
     --main-rojo: #F64747;
     --border-color: #C9C9C9;
     --width: 1366px;
+    --point-morado: #a157e3;
+    --roboto: 'Roboto', Arial, sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
 }
 
 * {
@@ -16,7 +16,9 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: var(--roboto);
+    line-height: 1.6;
+    color: rgb(24, 24, 24);
 }
 
 a {
@@ -26,13 +28,12 @@ a {
 /* ################################# header CSS  */
 
 header.index-header {
-    width: 100vw;
-    height: 700px;
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3), rgb(161, 87, 227, 0.5)), url('../imgs/header/main-foto-low.jpg');
+    width: 100%;
+    height: 650px;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3), rgba(161, 87, 227, 0.6)), url('../imgs/header/main-foto-low.jpg');
     background-size: cover;
     /* background-position-y: -100px; */
     background-repeat: no-repeat;
-    filter: blur(100);
 }
 
 header .header-contenedor {
@@ -61,8 +62,9 @@ header .div-logo img {
     margin-right: 1rem;
 }
 
-header .div-logo h2 {
-    font-family: 'Montserrat', Arial, sans-serif;
+header .div-logo h2, .footer-logo-text h2 {
+    font-family: var(--montserrat);
+    font-weight: 400;
 }
 
 header .div-logo h2 a {
@@ -80,7 +82,7 @@ header .div-text-iniciar a {
     font-size: 0.9rem;
     border: 1px solid var(--main-rojo);
     border-radius: 15px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
     color: var(--blanco);
     transition: all 0.2s;
 }
@@ -105,6 +107,7 @@ header .copy-contenedor h1 {
     margin-bottom: 5rem;
     color: var(--blanco);
     font-size: 3rem;
+    letter-spacing: 1px;
 }
 
 .registrar-boton {
@@ -170,23 +173,286 @@ section .tarjetas .tarjeta div img {
 section .comofunciona {
     width: 100%;
     height: 400px;
-    border: 1px solid blue;
+    background-image: url('../imgs/section/naranja-icon.svg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+
+section .comofunciona h2 {
+    font-size: 2rem;
+    font-family: var(--montserrat);
+}
+
+section .comofunciona-tarjeta-contenedor {
+    width: 80%;
+    max-width: var(--width);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .comofunciona .comofunciona-tarjeta {
+    width: 320px;
+    height: 250px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+section .comofunciona-tarjeta .comofunciona-imgs {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
+}
+
+section .comofunciona-tarjeta h3 {
+    margin-bottom: 15px;
+    font-family: var(--montserrat);
+}
+
+section .comofunciona-tarjeta p {
+    padding: 0 10px;
+    color: var(--blanco);
+}
+
+section .comofunciona-tarjeta .tienda-app {
+    width: 50%;
+    margin: 10px auto;
+}
+
+section .comofunciona-tarjeta .appstore-icons {
+    margin: 0 10px;
+}
+
+
+/* // asi quedaria tu anuncio */
+
+
+.asi-tu-anuncio {
+    max-width: var(--width);
+    padding: 0 5%;
+    margin-bottom: 3rem;
+}
+
+.asi-tu-anuncio h3 {
+    font-family: var(--montserrat);
+}
+
+.asi-tu-anuncio .anuncio-tarjeta-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.asi-tu-anuncio .anuncio-tarjeta {
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    width: 49%;
+    min-width: 400px;
+    height: auto;
+    padding: 0.5rem;
+    margin: 10px 0;
+}
+
+.asi-tu-anuncio .anuncio-tarjeta .anuncio-img {
+    flex: 1;
+    width: 280px;
+    height: 220px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.asi-tu-anuncio .anuncio-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.asi-tu-anuncio .anuncio-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.asi-tu-anuncio .anuncio-info .mini-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    /* margin-bottom: 10px; */
+}
+
+.asi-tu-anuncio .anuncio-info .oferta {
+    color: var(--main-rojo);
+    font-weight: bold;
+    /* margin-bottom: 10px; */
+}
+
+.asi-tu-anuncio .anuncio-info .descripcion {
+    font-size: 0.8rem;
+}
+
+.asi-tu-anuncio .anuncio-info .precio {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: none;
+}
+
+.anuncio-info .precio p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.anuncio-info .precio span {
+    color: #b4b4b4;
+    font-size: 0.8rem;
+}
+
+.anuncio-info .precio img {
+    margin-left: 10px;
+}
+
+
+/* // unete triunfo.com */
+
+section .unete-caja {
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(to right, var(--main-rojo), rgb(255, 190, 68));
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-section .comofunciona .comofunciona-tarjeta-contenedor {
-    width: var(--width);
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid skyblue;
+section .unete-caja h1 {
+    color: var(--blanco);
+    font-size: 2.5rem;
+    margin-right: 2rem;
 }
-section .comofunciona .comofunciona-tarjeta {
-    width: 300px;
-    height: 300px;
-    border: 1px solid magenta;
+
+
+/* // quieres ayuda */
+
+section .ayuda-cuenta {
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url('../imgs/section/ayuda-cliente.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .ayuda-cuenta .ayuda-texto-contenedor {
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.ayuda-texto-contenedor h2 {
+    font-size: 2rem;
+}
+
+.ayuda-texto-contenedor .ayuda-boton a {
+    border: 1px solid var(--main-rojo);
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    color: var(--main-rojo);
+    transition: all 0.2s;
+}
+
+.ayuda-texto-contenedor .ayuda-boton a:hover {
+    background: var(--blanco);
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* ################################# footer CSS  */
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: #333;
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .parte-logo, footer .parte-enlaces {
+    width: 40%;
+    height: 80%;
+}
+
+footer .parte-logo {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+}
+
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .social-media-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+footer .social-media-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+footer .parte-enlaces {
+    font-size: 0.9rem;
+}
+
+footer .parte-enlaces .enlace-inicio {
+    color: var(--main-rojo);
+}
+
+footer .parte-enlaces .enlaces-politicas {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.enlaces-politicas p::after {
+    content: '|';
+    margin: 0 10px;
+}
+
+.enlaces-politicas p:last-child::after {
+    content: '';
+}
+
+.enlaces-politicas a {
+    color: var(--blanco);
+}
+
+.copyright {
+    color: #b4b4b4;
+    font-size: 0.8rem;
 }
