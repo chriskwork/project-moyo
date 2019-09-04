@@ -1,0 +1,6 @@
+<svg id="arrow-derecha" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+  <g id="Layer_1" data-name="Layer 1">
+    <circle id="Elipse_15" data-name="Elipse 15" cx="22.5" cy="22.5" r="22.5" fill="#e84a4a"/>
+    <path id="Trazado_16" data-name="Trazado 16" d="M28,17.85l1.45-1.45a1.56,1.56,0,0,1,2.22,0L44.45,29.12a1.58,1.58,0,0,1,0,2.22L31.71,44.08a1.58,1.58,0,0,1-2.22,0L28,42.62a1.58,1.58,0,0,1,0-2.25l8-7.51H17.14a1.58,1.58,0,0,1-1.58-1.58V29.19a1.57,1.57,0,0,1,1.58-1.57H36L28.07,20.1A1.57,1.57,0,0,1,28,17.85Z" transform="translate(-7.736 -7.738)" fill="#fff"/>
+  </g>
+</svg>
