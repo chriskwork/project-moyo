@@ -1,2 +1,25 @@
 orange: #ffc368
 morado: #6747CD
+
+documento.css deleted =>
+
+section.documento .pregunta p.main-titulo {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 10px;
+    
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+section.documento .pregunta p.main-titulo:hover {
+    background: var(--main-rojo);
+    color: var(--blanco);
+}
+
+section.documento .pregunta .activada {
+    background: var(--main-rojo);
+    color: var(--blanco);
+    font-weight: bold;
+}

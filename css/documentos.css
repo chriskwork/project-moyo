@@ -19,42 +19,47 @@ section.documento h1 {
     margin-bottom: 2rem;
 }
 
-section.documento .pregunta {
-    text-align: center;
-    margin-bottom: 10px;
-    background: var(--blanco);
-    color: #333;
-    border-radius: 10px;
+/* // preguntas frecuentes  */
+
+section.documento .pregunta-contenedor {
+    border: 1px solid var(--main-rojo);
+    border-radius: 20px;
+    padding: 0 20px;
+    background: rgba(255, 255, 255, 0.75);
 }
 
-section.documento .pregunta p.main-titulo {
-    padding: 5px;
-    width: 100%;
-    border: 1px solid #333;
-    border-radius: 10px;
-    
-    transition: all 0.2s;
+section.documento .pregunta {
+    margin-top: 1rem;
+}
+
+section.documento .pregunta:last-child {
+    margin-bottom: 1rem;
+}
+
+section.documento .pregunta .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
-section.documento .pregunta p.main-titulo:hover {
-    background: var(--main-rojo);
-    color: var(--blanco);
-}
-
-section.documento .pregunta .activada {
-    background: var(--main-rojo);
-    color: var(--blanco);
+section.documento .pregunta .titulo .preguntaActiva {
+    color: var(--main-rojo);
     font-weight: bold;
 }
 
+section.documento .pregunta .titulo img {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+
 section.documento .respuesta {
-    border: 1px solid var(--border-color);
-    margin: 5px 0;
-    border-radius: 10px;
-    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    padding: 10px 0 1rem 0;
     background: var(--blanco);
-    display: block;
+    display: none;
 }
 
 section.documento .respuesta p.titulo {
