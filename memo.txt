@@ -1,0 +1,2 @@
+orange: #ffc368
+morado: #6747CD

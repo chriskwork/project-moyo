@@ -1,0 +1,48 @@
+.docu-text-registrar span {
+    font-size: 0.8rem;
+}
+
+.docu-text-registrar a {
+    /* border: none; */
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* // login form css */
+
+form.form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+}
+
+form.form-login input {
+    width: 50%;
+    padding: 1rem;
+    font-family: var(--roboto);
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+}
+
+form.form-login input[type=text]::placeholder, 
+form.form-login input[type=password]::placeholder {
+    color: var(--border-color);
+}
+
+form.form-login input:focus {
+    border: 1px solid var(--main-rojo);
+}
+
+form.form-login input[type=submit] {
+    background: var(--main-rojo);
+    color: var(--blanco);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+form.form-login input[type=submit]:hover {
+    background: #6747CD;
+}

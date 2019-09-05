@@ -36,12 +36,12 @@ header.index-header {
     background-repeat: no-repeat;
 }
 
-header .header-contenedor {
+header .header-contenedor, .docu-index-header {
     max-width: var(--width);
     height: 100%;
 }
 
-header .logo-contenedor {
+header .logo-contenedor, .docu-logo-contenedor {
     width: 100%;
     height: 80px;
     display: flex;
@@ -50,19 +50,20 @@ header .logo-contenedor {
     padding: 0 5%;
 }
 
-header .div-logo {
+header .div-logo, .docu-div-logo {
     flex: 1;
     display: flex;
     align-items: center;
 }
 
-header .div-logo img {
+header .logo {
     width: 60px;
     height: 60px;
     margin-right: 1rem;
 }
 
-header .div-logo h2, .footer-logo-text h2 {
+header .div-logo h2, .footer-logo-text h2,
+.docu-div-logo h2 {
     font-family: var(--montserrat);
     font-weight: 400;
 }
@@ -73,7 +74,7 @@ header .div-logo h2 a {
 
 /* // boton iniciar sesion */
 
-header .div-text-iniciar {
+header .div-text-iniciar, .docu-text-iniciar {
     flex: 1;
     text-align: right;
 }
@@ -383,7 +384,8 @@ section .ayuda-cuenta .ayuda-texto-contenedor {
 
 footer {
     width: 100%;
-    height: 200px;
+    height: 180px;
+    padding: 2rem 0;
     background-color: #333;
     color: var(--blanco);
     display: flex;
@@ -393,7 +395,7 @@ footer {
 
 footer .parte-logo, footer .parte-enlaces {
     width: 40%;
-    height: 80%;
+    height: 100%;
 }
 
 footer .parte-logo {
@@ -412,6 +414,10 @@ footer .parte-logo {
     flex-direction: column;
 }
 
+.footer-logo-text .footer-small {
+    font-weight: 300;
+}
+
 footer .social-media-icon {
     display: flex;
     justify-content: space-between;
@@ -425,7 +431,7 @@ footer .social-media-icon img {
 }
 
 footer .parte-enlaces {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 footer .parte-enlaces .enlace-inicio {
@@ -454,5 +460,33 @@ footer .parte-enlaces .enlaces-politicas {
 
 .copyright {
     color: #b4b4b4;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+}
+
+
+/* ################################# documentos CSS
+    => preguntas, politicas, contacto etc */
+
+.docu-index-header {
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.docu-div-logo h2 a {
+    color: #333;
+}
+
+.docu-text-iniciar a {
+    font-size: 0.9rem;
+    border: 1px solid var(--main-rojo);
+    border-radius: 15px;
+    padding: 0.5rem 2rem;
+    color: var(--main-rojo);
+    transition: all 0.2s;
+}
+
+.docu-text-iniciar a:hover {
+    background: var(--main-rojo);
+    color: var(--blanco);
 }
