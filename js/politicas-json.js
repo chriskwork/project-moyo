@@ -1,24 +1,6 @@
 // ############### Preguntas frecuentes ###############
 
-const indicePregunta = [
-    "Registro e inicio de sesión",
-    "El perfil de la marca y puntos de venta",
-    "Permisos",
-    "Partners de Triunfon",
-    "Clientes",
-    "Novedades y Promociones",
-    "Experiencias",
-    "CRM",
-    "Notificaciones",
-    "Mensajes",
-    "Configuración",
-    "Estadísticas",
-    "Privacidad, seguridad y condiciones"
-]; 
-
-// no hace falta indice
-
-const preRegistro = [
+const preguntasFrecuentes = [
     {
         pregunta: "El teléfono que uso no es español",
         respuesta: "Por ahora Loycus sólo está en España por lo que únicamente se pueden introducir números con prefijo español. Si estás interesado en utilizarlo para un negocio ubicado en otro país ponte en contacto con nosotros a través de nuestro email sos@loycus.com."
@@ -34,7 +16,7 @@ const preRegistro = [
         respuesta: "No te preocupes, si has olvidado tu contraseña puedes hacer click en el botón Recordar contraseña. Solo tienes que introducir el email de registro y te enviaremos las instrucciones al correo para que puedas volver a configurar una contraseña"
     },
     {
-        pregunta: "He recibido un correo electrónico o un SMS que me dice que he creado una nueva cuenta en Loycus, pero no me he registrado",
+        pregunta: "He recibido un correo electrónico me dice que he creado una nueva cuenta, pero no me he registrado",
         respuesta: "Lo más probable es que alguien haya intentado registrar una cuenta de Loycus utilizando tus datos por error. Ponte en contacto con nosotros a través de nuestro email sos@loycus.com."
     },
     {
@@ -50,10 +32,7 @@ const preRegistro = [
     {
         pregunta: "¿Qué hago si me han robado la cuenta o cambiado la contraseña?",
         respuesta: "Si no puedes acceder a tu cuenta y crees que te la han robado, escríbenos a sos@loycus.com y explícanos el problema, nos pondremos en contacto contigo lo antes posible."
-    }
-];
-
-const preElPerfil = [
+    },
     {
         pregunta: "¿Qué es una marca en Loycus?, ¿Y un punto de venta?",
         respuesta: `Una marca en Loycus es la identificación comercial bajo la que se conoce al negocio, mientras que el punto de venta es el lugar físico donde la marca desarrolla su negocio. 
@@ -101,10 +80,7 @@ const preElPerfil = [
     {
         pregunta: "¿Cómo subo fotos a la galería de un punto de venta?",
         respuesta: `Las fotos que subes en Promociones y Novedades no se quedan en la galería de tu punto de venta. Si quieres que en tu perfil Loycus se queden fijadas las fotos que más te gustan de tu punto de venta, puedes hacerlo a través de tu perfil de punto de venta, en el apartado fotos.`
-    }
-];
-
-const prePermisos = [
+    },
     {
         pregunta: "¿Qué es un permiso?",
         respuesta: `Puedes añadir a más personas que te ayuden a gestionar tu marca y tus puntos de venta en Loycus Business a través de Permisos. Los permisos pueden ser de administrador de marca y de moderador de puntos de venta.
@@ -128,10 +104,7 @@ const prePermisos = [
         respuesta: `En caso de que una persona con cuenta en Loycus Business haya recibido un permiso sobre otra marca, solo tendrá que aceptar el permiso mediante el email que le enviemos a la cuenta que nos haya proporcionado el administrador y se le añadirá a su cuenta. El email de invitación a permisos caducará después de 15 días del envío en caso de que no se acepte.
 
         En el caso de que la persona aún no tenga cuenta en Loycus Business, se tendrá que registrar en la plataforma con el mismo email con el que ha recibido el permiso y una vez registrado se le asignará el permiso automáticamente.`
-    }
-];
-
-const prePartners = [
+    },
     {
         pregunta: "¿Qué es un Partner de Loycus?",
         respuesta: `Un Partner de Loycus es un profesional de la comunicación que gestiona o quiere gestionar alguna marca en Loycus.
@@ -143,10 +116,7 @@ const prePartners = [
     {
         pregunta: "¿Dónde puedo ver todas las agencias que trabajan como partners de Loycus?",
         respuesta: `Disponemos de un apartado en el footer de la web, con acceso a un listado para que conozcas todas los Partners asociados a Loycus.`
-    }
-];
-
-const preClientes = [
+    },
     {
         pregunta: "¿Cómo me buscan los clientes?",
         respuesta: `Los clientes de tu negocio te encuentra a través de app de Loycus. En ella hay diferentes formas en la que pueden encontrarte:
@@ -160,10 +130,7 @@ const preClientes = [
         respuesta: `A través del CRM podrás conocer algunos datos de tus seguidores como su localización, la fecha en la que empezaron a seguirte, el número de seguidores que tienen, cuáles de las promociones se han canjeado, las experiencias que han escrito sobre tus puntos de venta o las promociones personalizadas que les has enviado.
 
         Además también podrás enviar promociones personalizadas a quien elijas de forma que sólo el destinatario podrá ver la promoción y canjearla.`
-    }
-];
-
-const preNovedades = [
+    },
     {
         pregunta: "¿Quién va a ver mis publicaciones?",
         respuesta: `Las publicaciones que hagas la podrán ver los potenciales clientes a través de la app de Loycus. Pueden encontrarlas en tu perfil de marca y de puntos de venta siempre,, se podrán ver cuando el usuario busque negocios de tu categoría cerca del radio donde se ubica tu punto de venta.`
@@ -175,10 +142,7 @@ const preNovedades = [
     {
         pregunta: "¿Cómo programo una publicación?",
         respuesta: `Si quieres que una publicación se publique en el momento que tu elijas puedes programarla. Para ello tendrás que rellenar todos los campos de la novedad o promoción que quieres publicar y, al final, junto a la opción de publicar se encuentra el botón de programar. Haciendo click en él podrás elegir el día y la hora en la que quieres que tu publicación se publique.`
-    }
-];
-
-const preExperiencias = [
+    },
     {
         pregunta: "¿Qué es una experiencia?",
         respuesta: `Las experiencias son publicaciones que los clientes pueden hacer. Existen dos tipos:
@@ -189,10 +153,7 @@ const preExperiencias = [
     {
         pregunta: "¿Puedo responder a una experiencia?",
         respuesta: `Sí, las experiencias son publicaciones en las que cualquier usuario y tu marca puede dar a me gusta o comentarlas.`
-    }
-];
-
-const preCrm = [
+    },
     {
         pregunta: "¿Qué es el CRM y para qué sirve?",
         respuesta: `El CRM es un listado de las personas que siguen a tu marca / puntos de venta. Se accede mediante el menú principal y te permite filtrar a tus seguidores en función de sus características, acceder a sus perfiles o crear promociones personalizadas y enviárselas.`
@@ -200,5 +161,16 @@ const preCrm = [
     {
         pregunta: "Si un usuario deja de seguir a mi punto de venta, ¿puedo seguir viendo su perfil en el CRM?",
         respuesta: `Si el usuario no sigue a ningún punto de venta de tu marca dejarás de ver su perfil en el CRM y no podrás volver a enviarle promociones personalizadas..`
+    },
+    {
+        pregunta: "¿Qué son las notificaciones?",
+        respuesta: `Las notificaciones son avisos de que alguien ha interactuado con tu perfil de alguna forma: siguiéndolo, dando a me gusta o comentando una publicación, al recibir una experiencia, recibir un mensaje, cuando se caduca una publicación, cuando se publica una promoción programada o cuando hay alguna modificación en los permisos.
+
+        Las notificaciones aparecen accediendo a través del botón de avisos, en la barra lateral de avisos en el apartado de notificaciones.
+        
+        Recuerda que Loycus Business solo guarda las notificaciones durante 30 días, después no volverán a aparecer.
+        
+        También se pueden activar a través del navegador las notificaciones push. Este tipo de notificaciones requieren de tu aprobación en el navegador.`
     }
 ];
+

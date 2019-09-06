@@ -22,6 +22,8 @@ section.documento h1 {
 /* // preguntas frecuentes  */
 
 section.documento .pregunta-contenedor {
+    width: 100%;
+    height: 100%;
     border: 1px solid var(--main-rojo);
     border-radius: 20px;
     padding: 0 20px;
@@ -29,6 +31,8 @@ section.documento .pregunta-contenedor {
 }
 
 section.documento .pregunta {
+    width: 100%;
+    height: 100%;
     margin-top: 1rem;
 }
 
@@ -43,7 +47,11 @@ section.documento .pregunta .titulo {
     cursor: pointer;
 }
 
-section.documento .pregunta .titulo .preguntaActiva {
+section.documento .pregunta .titulo p:hover {
+    color: var(--main-rojo);
+}
+
+section.documento .pregunta .preguntaActiva {
     color: var(--main-rojo);
     font-weight: bold;
 }

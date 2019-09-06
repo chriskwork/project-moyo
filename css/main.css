@@ -120,6 +120,10 @@ header .copy-contenedor h1 {
     font-size: 1.2rem;
 }
 
+header .copy-contenedor .div-text-iniciar-responsive-sm {
+    display: none;
+}
+
 
 /* ################################# section CSS  */
 
@@ -187,6 +191,7 @@ section .comofunciona {
 section .comofunciona h2 {
     font-size: 2rem;
     font-family: var(--montserrat);
+    font-weight: bold;
 }
 
 section .comofunciona-tarjeta-contenedor {
@@ -214,6 +219,7 @@ section .comofunciona-tarjeta .comofunciona-imgs {
 section .comofunciona-tarjeta h3 {
     margin-bottom: 15px;
     font-family: var(--montserrat);
+    font-weight: bold;
 }
 
 section .comofunciona-tarjeta p {
@@ -255,7 +261,7 @@ section .comofunciona-tarjeta .appstore-icons {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     width: 49%;
-    min-width: 400px;
+    /* min-width: 400px; */
     height: auto;
     padding: 0.5rem;
     margin: 10px 0;
@@ -265,13 +271,13 @@ section .comofunciona-tarjeta .appstore-icons {
     flex: 1;
     width: 280px;
     height: 220px;
-    object-fit: cover;
     margin-right: 10px;
 }
 
 .asi-tu-anuncio .anuncio-img img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .asi-tu-anuncio .anuncio-info {
@@ -489,4 +495,247 @@ footer .parte-enlaces .enlaces-politicas {
 .docu-text-iniciar a:hover {
     background: var(--main-rojo);
     color: var(--blanco);
+}
+
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 768px */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 768px */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 768px */
+
+@media screen and (max-width: 768px) {
+
+    header.index-header {
+        background-position: center;
+    }
+
+    header .logo-contenedor {
+        height: 120px;
+        /* align-items: flex-end; */
+    }
+
+    header .copy-contenedor {
+        align-items: center;
+    }
+
+    header .copy-contenedor h1 {
+        text-align: center;
+        text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* // tarjetas */
+
+    section .tarjetas {
+        flex-direction: column;
+    }
+
+    section .tarjetas .tarjeta {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    section .tarjetas .tarjeta:last-child {
+        margin-bottom: 0;
+    }
+
+    /* // como funciona */
+
+    section .comofunciona {
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    section .comofunciona-tarjeta-contenedor {
+        flex-direction: column;
+    }
+
+    section .comofunciona h2 {
+        margin: 1rem 0 2rem 0;
+    }
+
+    section .comofunciona .comofunciona-tarjeta {
+        width: 100%;
+    }
+
+
+    /* tu anuncio */
+
+    .asi-tu-anuncio h3.asi-tu-anuncio-maintitle {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .asi-tu-anuncio .anuncio-tarjeta {
+        width: 100%;
+    }
+
+    .asi-tu-anuncio .anuncio-info .title,
+    .asi-tu-anuncio .anuncio-info .oferta {
+        text-align: center;
+    }
+    
+    /* unete triunfo.com */
+
+    section .unete-caja {
+        flex-direction: column;
+        padding-bottom: 0.5rem;
+    }
+    
+
+    /* // quieres ayuda */
+
+    section .ayuda-cuenta {
+        height: auto;
+    }
+
+    section .ayuda-cuenta .ayuda-texto-contenedor {
+        width: 80%;
+        height: auto;
+    }
+
+    .ayuda-texto-contenedor .ayuda-boton {
+        margin: 2rem 0;
+    }
+
+    /* ################################# footer CSS  */
+
+    footer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    footer .parte-logo, footer .parte-enlaces {
+        width: 80%;
+        justify-content: center;
+    }
+
+    footer .parte-logo {
+        border-bottom: 1px solid rgb(201, 201, 201, 0.5);
+        padding-bottom: 3rem;
+    }
+
+    footer .parte-enlaces {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    footer .parte-enlaces .enlaces-politicas {
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 414px */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 414px */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 414px */
+
+@media screen and (max-width: 414px) {
+
+    header.index-header {
+        height: 100vh;
+    }
+
+    header .logo-contenedor {
+        align-items: flex-end;
+    }
+
+    header .header-contenedor .div-text-iniciar {
+        display: none;
+    }
+
+    header .header-contenedor .div-logo {
+        justify-content: center;
+    }
+
+    header .copy-contenedor {
+        align-items: center;
+        padding: 0 5%;
+    }
+
+    header .copy-contenedor h1 {
+        font-size: 2.5rem;
+        padding: 0 20%;
+        margin-bottom: 3rem;
+    }
+
+    header .copy-contenedor .div-text-iniciar-responsive-sm {
+        display: block;
+        margin-top: 3rem;
+    }
+
+    header .copy-contenedor .div-text-iniciar-responsive-sm a {
+        color: var(--blanco);
+    }
+
+    /* // tarjetas */
+
+    section .tarjetas .tarjeta {
+        height: auto;
+    }
+
+
+    /* // como funciona */
+
+    section .comofunciona h2 {
+        margin: 1rem 0 2rem 0;
+    }
+
+    section .comofunciona .comofunciona-tarjeta {
+        height: auto;
+    }
+
+
+    /* tu anuncio */
+
+
+    .asi-tu-anuncio .anuncio-tarjeta {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .asi-tu-anuncio .anuncio-tarjeta-contenedor {
+        width: 100%;
+        min-width: auto;
+        flex-direction: column;
+    }
+
+    .asi-tu-anuncio .anuncio-tarjeta .anuncio-img {
+        margin: 0 0 10px 0;
+        width: 100%;
+    }
+    
+    /* unete triunfo.com */
+
+    section .unete-caja h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0 0 10px 0;
+    }
+    
+
+    /* ################################# footer CSS  */
+
+    footer .footer-small {
+        font-size: 0.7rem;
+    }
+
+
+}
+
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 320px */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 320px */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 320px */
+
+@media screen and (max-width: 320px) {
+
+    header .copy-contenedor h1 {
+        font-size: 2rem;
+        padding: 0 20%;
+    }
+
 }
