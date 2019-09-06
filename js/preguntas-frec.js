@@ -7,36 +7,33 @@ function init() {
 
     for(item in preguntasFrecuentes) {
         preguntaContenedor.innerHTML += `
-            <div class="titulo">
-            <p class="question">Q. ${preguntasFrecuentes[item].pregunta}</p>
-            <img src="../imgs/section/chevron-down-solid.svg" alt="">
-            </div>
-            <div class="respuesta">
-                ${preguntasFrecuentes[item].respuesta}
+            <div class="pregunta-element">
+                <div class="titulo">
+                <p class="question">Q. ${preguntasFrecuentes[item].pregunta}</p>
+                <img class="question-arrow-icon" src="../imgs/section/chevron-down-solid.svg" alt="">
+                </div>
+                <div class="respuesta">
+                    ${preguntasFrecuentes[item].respuesta}
+                </div>
             </div>
         `;
     }
 
+    const preguntaElement = document.querySelectorAll(".pregunta-element");
+    // const question = document.querySelectorAll(".question");
+    // const respuesta = document.querySelectorAll(".respuesta");
     
+    preguntaElement.forEach((element) => {
+        // console.log(element)
+        element.addEventListener("click", () => {
+            const question = document.querySelector(".question");
+            const respuesta = document.querySelector(".respuesta");
+        
+            question.classList.add("preguntaActiva");
+            respuesta.style.display = "block";
+            
+        });
+    });
+
 }
 
-
-
-
-
-
-
-
-
-
-
-
-// function preguntaClick() {
-//     const titulo = document.querySelectorAll(".titulo");
-//     const question = document.querySelectorAll(".question");
-//     for(i in titulo){
-//         titulo[i].addEventListener("click", () => {
-//             question.classList.add("preguntaActiva");
-//         })   
-//     }
-// }

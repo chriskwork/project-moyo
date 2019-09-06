@@ -40,6 +40,12 @@ section.documento .pregunta:last-child {
     margin-bottom: 1rem;
 }
 
+section.documento .pregunta .pregunta-element {
+    width: 100%;
+    height: auto;
+    /* border: 1px solid blue; */
+}
+
 section.documento .pregunta .titulo {
     display: flex;
     justify-content: center;

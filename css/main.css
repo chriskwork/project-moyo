@@ -157,6 +157,11 @@ section .tarjetas .tarjeta {
     border-radius: 10px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
+    margin-right: 10px;
+}
+
+section .tarjetas .tarjeta:last-child {
+    margin-right: 0;
 }
 
 section .tarjetas .tarjeta div, section .tarjetas .tarjeta h3 {
@@ -727,11 +732,11 @@ footer .parte-enlaces .enlaces-politicas {
 
 
 
-/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 320px */
-/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 320px */
-/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 320px */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 375px */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 375px */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 375px */
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
 
     header .copy-contenedor h1 {
         font-size: 2rem;
