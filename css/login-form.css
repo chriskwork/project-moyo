@@ -10,14 +10,16 @@
 
 /* // login form css */
 
-form.form-login {
+form.form-login, form.form-contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 800px;
 }
 
-form.form-login input {
+form.form-login input, 
+form.form-contacto input,
+form.form-contacto textarea {
     width: 50%;
     padding: 1rem;
     font-family: var(--roboto);
@@ -27,15 +29,20 @@ form.form-login input {
 }
 
 form.form-login input[type=text]::placeholder, 
-form.form-login input[type=password]::placeholder {
+form.form-login input[type=password]::placeholder,
+form.form-contacto input[type=text]::placeholder,
+form.form-contacto textarea::placeholder {
     color: var(--border-color);
 }
 
-form.form-login input:focus {
+form.form-login input:focus,
+form.form-contacto input:focus,
+form.form-contacto textarea:focus {
     border: 1px solid var(--main-rojo);
 }
 
-form.form-login input[type=submit] {
+form.form-login input[type=submit],
+form.form-contacto input[type=submit] {
     background: var(--main-rojo);
     color: var(--blanco);
     text-transform: uppercase;
@@ -43,6 +50,11 @@ form.form-login input[type=submit] {
     transition: all 0.2s;
 }
 
-form.form-login input[type=submit]:hover {
+form.form-login input[type=submit]:hover,
+form.form-contacto input[type=submit]:hover {
     background: #6747CD;
+}
+
+form.form-contacto textarea {
+    resize: vertical;
 }

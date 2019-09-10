@@ -470,10 +470,18 @@ footer .parte-enlaces .enlaces-politicas {
     color: var(--blanco);
 }
 
+.enlaces-politicas a:hover {
+    text-decoration: underline;
+}
+
 .copyright {
     color: #b4b4b4;
     font-size: 0.7rem;
 }
+
+/* ===================================================================
+index.html css hasta aqui
+=================================================================== */
 
 
 /* ################################# documentos CSS
