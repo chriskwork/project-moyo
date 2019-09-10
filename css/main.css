@@ -119,6 +119,11 @@ header .copy-contenedor h1 {
     color: var(--blanco);
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
     font-size: 1.2rem;
+    transition: background 0.2s;
+}
+
+.registrar-boton:hover {
+    background: var(--point-morado);
 }
 
 header .copy-contenedor .div-text-iniciar-responsive-sm {
@@ -312,7 +317,7 @@ section .comofunciona-tarjeta .appstore-icons {
 .asi-tu-anuncio .anuncio-info .precio {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: none;
 }
 
@@ -326,8 +331,18 @@ section .comofunciona-tarjeta .appstore-icons {
     font-size: 0.8rem;
 }
 
-.anuncio-info .precio img {
+.anuncio-info .precio svg {
+    fill: var(--blanco);
+    width: 35px;
+    height: 35px;
     margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.anuncio-info .precio svg:hover {
+    transform: scale(1.1);
+    fill: #f0a340;
 }
 
 
@@ -437,9 +452,16 @@ footer .social-media-icon {
     margin-top: 1rem;
 }
 
-footer .social-media-icon img {
+footer .social-media-icon svg {
     width: 20px;
     height: 20px;
+    cursor: pointer;
+    fill: var(--blanco);
+    transition: all 0.3s;
+}
+
+footer .social-media-icon svg:hover {
+    fill: var(--main-rojo);
 }
 
 footer .parte-enlaces {
@@ -513,8 +535,11 @@ index.html css hasta aqui
 
 
 
-/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 768px */
-/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 768px */
+/* ===================================================================
+RESPONSIVE
+=================================================================== */
+
+
 /* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 768px */
 
 @media screen and (max-width: 768px) {
@@ -643,8 +668,7 @@ index.html css hasta aqui
 
 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 414px */
-/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 414px */
-/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 414px */
+
 
 @media screen and (max-width: 414px) {
 
@@ -742,8 +766,7 @@ index.html css hasta aqui
 
 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 375px */
-/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 375px */
-/* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 375px */
+
 
 @media screen and (max-width: 375px) {
 

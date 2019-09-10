@@ -58,7 +58,7 @@ button.pregunta:hover, button.pregunta.preguntaActive {
 }
 
 div.respuesta {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
@@ -110,3 +110,47 @@ div.contacto-icon .icon-direccion {
     height: 95%;
 }
 
+
+/* %%%%%%%%%%%%%%%%%%%%%% RESPONSIVE */
+
+@media screen and (max-width: 414px) {
+
+    .docu-index-header {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .docu-logo-contenedor {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .docu-div-logo {
+        margin-bottom: 25px;
+    }
+
+    /* %% login, registrar form */
+
+    .documento {
+        width: 100%;
+    }
+
+    form.form-login input, 
+    form.form-contacto input,
+    form.form-contacto textarea {
+        width: 90%;
+    }
+
+    /* %% contactos */
+
+    .contacto-info-contenedor {
+        flex-direction: column;
+    }
+
+}
