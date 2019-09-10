@@ -26,62 +26,37 @@ section.documento .pregunta-contenedor {
     height: 100%;
     border: 1px solid var(--main-rojo);
     border-radius: 20px;
-    padding: 0 20px;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.75);
 }
 
-section.documento .pregunta {
+button.pregunta {
     width: 100%;
-    height: 100%;
-    margin-top: 1rem;
-}
-
-section.documento .pregunta:last-child {
-    margin-bottom: 1rem;
-}
-
-section.documento .pregunta .pregunta-element {
-    width: 100%;
-    height: auto;
-    /* border: 1px solid blue; */
-}
-
-section.documento .pregunta .titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: transparent;
+    padding: 5px 0;
+    border-radius: 10px;
+    border: 0;
+    font-size: 1rem;
     cursor: pointer;
+    margin-bottom: 0.5rem;
 }
 
-section.documento .pregunta .titulo p:hover {
-    color: var(--main-rojo);
+button.pregunta:last-child {
+    margin-bottom: 0;
 }
 
-section.documento .pregunta .preguntaActiva {
-    color: var(--main-rojo);
-    font-weight: bold;
+button.pregunta:hover, button.pregunta.preguntaActive {
+    background: var(--main-rojo);
+    color: var(--blanco);
 }
 
-section.documento .pregunta .titulo img {
-    width: 15px;
-    height: 15px;
-    margin-left: 10px;
+div.respuesta {
+    font-size: 0.85rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
 }
 
-section.documento .respuesta {
-    border-bottom: 1px solid var(--border-color);
-    font-size: 0.9rem;
-    padding: 10px 0 1rem 0;
-    background: var(--blanco);
-    display: none;
-}
-
-section.documento .respuesta p.titulo {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-section.documento .respuesta p.texto {
-    font-size: 0.8rem;
-    text-align: left;
+div.respuesta p {
+    padding: 0 15px 15px 15px;
 }

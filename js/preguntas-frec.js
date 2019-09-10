@@ -1,39 +1,34 @@
 init();
 
-
 function init() {
 
-    const preguntaContenedor = document.querySelector(".pregunta");
-
+    const preguntaContenedor = document.querySelector(".pregunta-contenedor");
     for(item in preguntasFrecuentes) {
         preguntaContenedor.innerHTML += `
-            <div class="pregunta-element">
-                <div class="titulo">
-                <p class="question">Q. ${preguntasFrecuentes[item].pregunta}</p>
-                <img class="question-arrow-icon" src="../imgs/section/chevron-down-solid.svg" alt="">
-                </div>
-                <div class="respuesta">
+            <button class="pregunta">Q. ${preguntasFrecuentes[item].pregunta}</button>
+            <div class="respuesta">
+                <p>
                     ${preguntasFrecuentes[item].respuesta}
-                </div>
+                </p>
             </div>
         `;
     }
 
-    const preguntaElement = document.querySelectorAll(".pregunta-element");
-    // const question = document.querySelectorAll(".question");
-    // const respuesta = document.querySelectorAll(".respuesta");
-    
-    preguntaElement.forEach((element) => {
-        // console.log(element)
-        element.addEventListener("click", () => {
-            const question = document.querySelector(".question");
-            const respuesta = document.querySelector(".respuesta");
-        
-            question.classList.add("preguntaActiva");
-            respuesta.style.display = "block";
-            
-        });
-    });
+    const pregunta = document.querySelectorAll(".pregunta");
+    for(let i = 0; i < pregunta.length; i++) {
+        pregunta[i].onclick = function () {
+            this.classList.toggle("preguntaActive");
+            const content = this.nextElementSibling;
+            if(content.style.maxHeight) {
+                content.style.maxHeight = null;
+            }else {
+                content.style.maxHeight= content.scrollHeight + "px";
+            }
+        }
+    }
 
 }
+
+
+
 

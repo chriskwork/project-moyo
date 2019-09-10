@@ -23,3 +23,51 @@ section.documento .pregunta .activada {
     color: var(--blanco);
     font-weight: bold;
 }
+
+
+
+square: .class:before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: color
+    left: 20px;
+    bottom -7px;
+    transform: rotate(45deg);
+}
+
+title-> <button class="title">title</button>
+div class=content
+p> text </p>
+
+button.title::after {
+    content: "";
+    url: chervron img
+    float: right;
+}
+
+button.title.active {
+    blabla;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+}
+
+const title = ~~ getElementsByClassName(title)
+
+for(i = 0; i < title.length; ++) {
+    title[i].onclick = function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+
+        if(content.style.maxHeight) {
+            content.style.maxHeight = null;
+        }else {
+            content.style.maxHeight= content.scrollHeight + "px";
+        }
+    }
+}

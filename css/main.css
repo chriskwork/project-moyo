@@ -36,9 +36,10 @@ header.index-header {
     background-repeat: no-repeat;
 }
 
-header .header-contenedor, .docu-index-header {
+header .header-contenedor {
     max-width: var(--width);
     height: 100%;
+    margin: 0 auto;
 }
 
 header .logo-contenedor, .docu-logo-contenedor {
@@ -142,7 +143,7 @@ section .tarjetas {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 3rem;
+    margin: 1.5rem auto 3rem auto;
 }
 
 section .tarjetas .tarjeta {
@@ -248,7 +249,7 @@ section .comofunciona-tarjeta .appstore-icons {
 .asi-tu-anuncio {
     max-width: var(--width);
     padding: 0 5%;
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem auto;
 }
 
 .asi-tu-anuncio h3 {
