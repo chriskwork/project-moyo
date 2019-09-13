@@ -21,6 +21,10 @@ section {
     height: 100%;
 }
 
+svg {
+    stroke: black;
+}
+
 svg:hover {
     stroke: rgb(92, 92, 196);
     fill: blue;
