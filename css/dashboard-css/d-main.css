@@ -21,6 +21,7 @@
     margin: 0;
     box-sizing: border-box;
     line-height: 1.6;
+    outline: none;
 }
 
 a {
@@ -320,19 +321,77 @@ a.icon-enlace div.ir-pagina {
     width: 100%;
     height: 100%;
     display: flex;
-    /* justify-content: space-between; */
     justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
+    position: relative;
+    flex-wrap: wrap;
 }
+
+.dash-oferta-tarjetas button {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 0;
+    /* background: transparent; */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dash-oferta-tarjetas button.slide-left {
+    left: 0;
+}
+
+.dash-oferta-tarjetas button.slide-right {
+    right: 0;
+}
+
+.dash-oferta-tarjetas:hover button {
+    opacity: 1;
+}
+/* 
+.dash-oferta-tarjetas button.slide-left::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    transform: rotate(-45deg);
+    top: 11px;
+    left: 14px;
+}
+
+.dash-oferta-tarjetas button.slide-right::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    transform: rotate(45deg);
+    top: 11px;
+    right: 14px;
+} */
+
+
+
 
 .dash-oferta-tarjetas .targeta {
     display: flex;
     flex-direction: column;
-    width: 250px;
+    max-width: 300px;
+    min-width: 250px;
     height: auto;
     border: 1px solid var(--light-gris);
     border-radius: 10px;
-    margin-right: 1.5rem;
+    margin: 0 1.5rem 1.5rem 0;
 }
 
 .dash-oferta-tarjetas .targeta:last-child {
@@ -394,7 +453,7 @@ a.icon-enlace div.ir-pagina {
 }
 
 .targeta-bottom-izq .likes {
-    margin-right: 5px;
+    margin-right: 0.5rem;
 }
 
 .targeta-bottom-der p.precio {
@@ -619,6 +678,27 @@ section.dashboard-negocio {
     content: '|';
     margin-right: 0.5rem;
 }
+
+.negocio-desc {
+    font-size: 0.9rem;
+    margin: 2rem 0;
+}
+
+.negocio-info {
+    border-left: 4px solid var(--main-rojo);
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.negocio-info .info-label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+
+
+
+
 
 .negocio-dato-contenedor .dato-header .negocio-likes img {
     width: 15px;

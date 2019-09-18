@@ -1,3 +1,24 @@
+// ######### oferta y eventos slide
+
+const botonIzq = document.querySelector(".slide-left");
+const botonDer = document.querySelector(".slide-right");
+const tarjeta = document.querySelectorAll(".targeta");
+
+// botonIzq.addEventListener("click", () => {
+//     targeta.style.transform = "translateX(-500px)";
+// });
+
+// botonDer.addEventListener("click", () => {
+//     targeta.style.transform = "translateX(-500px)";
+// });
+
+
+
+
+
+
+// ######### estadistica chart.js
+
 var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create
