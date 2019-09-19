@@ -71,3 +71,251 @@ for(i = 0; i < title.length; ++) {
         }
     }
 }
+
+
+
+######################## dashboard oferta targetas html
+
+<!-- individual targeta desde aqui -->
+                <div class="oferta-tarjeta">
+                    
+                    <div class="parte-img">
+                        <img src="../imgs/dashboard-imgs/h1.jpg" alt="">
+                        <div class="menu-rapido-contenedor">
+                            <div class="caja-puntos">
+                                <img class="puntos" src="../imgs/dashboard-imgs/dots.svg" alt="">
+                            </div>
+                            
+                            <div class="menu-rapido">
+                                <div class="menu-rapido-icon"><img src="../imgs/dashboard-imgs/editar.svg" alt=""></div>
+                                <div class="menu-rapido-icon"><img src="../imgs/dashboard-imgs/trashcan.svg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="oferta-info-contenedor">
+
+                        <div class="oferta-nombre">
+                            <a href=""><h3>Titulo de anuncio</h3></a>
+                            <p>#hotal #restaurante #viaje #oferta</p>
+                        </div>
+
+                        <div class="oferta-fecha-contenedor">
+                            <img src="../imgs/dashboard-imgs/calendar.svg" alt="">
+                            <p class="oferta-fecha">5. Sep 2019 - 10. Sep 2019</p>
+                        </div>
+
+                        <p class="oferta-descripcion">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tempore necessitatibus ex ad. Recusandae ex, magni vel eius incidunt odio!
+                        </p>
+
+                        <div class="oferta-abajo">
+                            <div class="likes-coment">
+                                <img src="../imgs/dashboard-imgs/heart.svg" alt="">
+                                <span>45</span>
+                                <img src="../imgs/dashboard-imgs/comentario.svg" alt="">
+                                <span>33</span>
+                            </div>
+                            <div class="precio">
+                                $69.99 <span>/ noche</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- individual targeta hasta aqui -->
+
+
+
+
+                <!-- dummy card -->
+
+                <div class="oferta-tarjeta">
+                    
+                        <div class="parte-img">
+                            <img src="../imgs/dashboard-imgs/h0.jpg" alt="">
+                            <div class="menu-rapido-contenedor">
+                                <div class="caja-puntos">
+                                    <img class="puntos" src="../imgs/dashboard-imgs/dots.svg" alt="">
+                                </div>
+                                <div class="menu-rapido">
+                                    <div class="menu-rapido-icon"><img src="../imgs/dashboard-imgs/editar.svg" alt=""></div>
+                                    <div class="menu-rapido-icon"><img src="../imgs/dashboard-imgs/trashcan.svg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="oferta-info-contenedor">
+    
+                            <div class="oferta-nombre">
+                                <a href=""><h3>Titulo de anuncio</h3></a>
+                                <p>#hotal #restaurante #viaje #oferta</p>
+                            </div>
+    
+                            <div class="oferta-fecha-contenedor">
+                                <img src="../imgs/dashboard-imgs/calendar.svg" alt="">
+                                <p class="oferta-fecha">5. Sep 2019 - 10. Sep 2019</p>
+                            </div>
+    
+                            <p class="oferta-descripcion">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tempore necessitatibus ex ad. Recusandae ex, magni vel eius incidunt odio!
+                            </p>
+    
+                            <div class="oferta-abajo">
+                                <div class="likes-coment">
+                                    <img src="../imgs/dashboard-imgs/heart.svg" alt="">
+                                    <span>45</span>
+                                    <img src="../imgs/dashboard-imgs/comentario.svg" alt="">
+                                    <span>33</span>
+                                </div>
+                                <div class="precio">
+                                    $69.99 <span>/ noche</span>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+
+                    <div class="oferta-tarjeta">
+                    
+                            <div class="parte-img">
+                                <img src="../imgs/dashboard-imgs/h2.jpg" alt="">
+                                <div class="menu-rapido-contenedor">
+                                    <div class="caja-puntos">
+                                        <img class="puntos" src="../imgs/dashboard-imgs/dots.svg" alt="">
+                                    </div>
+                                    <div class="menu-rapido">
+                                        <div class="menu-rapido-icon"><img src="../imgs/dashboard-imgs/editar.svg" alt=""></div>
+                                        <div class="menu-rapido-icon"><img src="../imgs/dashboard-imgs/trashcan.svg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="oferta-info-contenedor">
+        
+                                <div class="oferta-nombre">
+                                    <a href=""><h3>Titulo de anuncio</h3></a>
+                                    <p>#hotal #restaurante #viaje #oferta</p>
+                                </div>
+        
+                                <div class="oferta-fecha-contenedor">
+                                    <img src="../imgs/dashboard-imgs/calendar.svg" alt="">
+                                    <p class="oferta-fecha">5. Sep 2019 - 10. Sep 2019</p>
+                                </div>
+        
+                                <p class="oferta-descripcion">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tempore necessitatibus ex ad. Recusandae ex, magni vel eius incidunt odio!
+                                </p>
+        
+                                <div class="oferta-abajo">
+                                    <div class="likes-coment">
+                                        <img src="../imgs/dashboard-imgs/heart.svg" alt="">
+                                        <span>45</span>
+                                        <img src="../imgs/dashboard-imgs/comentario.svg" alt="">
+                                        <span>33</span>
+                                    </div>
+                                    <div class="precio">
+                                        $69.99 <span>/ noche</span>
+                                    </div>
+                                </div>
+        
+                            </div>
+        
+                        </div>
+
+                        <div class="oferta-tarjeta">
+                    
+                                <div class="parte-img">
+                                    <img src="../imgs/dashboard-imgs/h3.jpg" alt="">
+                                    <div class="menu-rapido-contenedor">
+                                        <div class="caja-puntos">
+                                            <img class="puntos" src="../imgs/dashboard-imgs/dots.svg" alt="">
+                                        </div>
+                                        <div class="menu-rapido">
+                                            <div class="menu-rapido-icon"><img src="../imgs/dashboard-imgs/editar.svg" alt=""></div>
+                                            <div class="menu-rapido-icon"><img src="../imgs/dashboard-imgs/trashcan.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="oferta-info-contenedor">
+            
+                                    <div class="oferta-nombre">
+                                        <a href=""><h3>Titulo de anuncio</h3></a>
+                                        <p>#hotal #restaurante #viaje #oferta</p>
+                                    </div>
+            
+                                    <div class="oferta-fecha-contenedor">
+                                        <img src="../imgs/dashboard-imgs/calendar.svg" alt="">
+                                        <p class="oferta-fecha">5. Sep 2019 - 10. Sep 2019</p>
+                                    </div>
+            
+                                    <p class="oferta-descripcion">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tempore necessitatibus ex ad. Recusandae ex, magni vel eius incidunt odio!
+                                    </p>
+            
+                                    <div class="oferta-abajo">
+                                        <div class="likes-coment">
+                                            <img src="../imgs/dashboard-imgs/heart.svg" alt="">
+                                            <span>45</span>
+                                            <img src="../imgs/dashboard-imgs/comentario.svg" alt="">
+                                            <span>33</span>
+                                        </div>
+                                        <div class="precio">
+                                            $69.99 <span>/ noche</span>
+                                        </div>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+
+                            <div class="oferta-tarjeta">
+                    
+                                    <div class="parte-img">
+                                        <img src="../imgs/dashboard-imgs/h4.jpg" alt="">
+                                        <div class="menu-rapido-contenedor">
+                                            <div class="caja-puntos">
+                                                <img class="puntos" src="../imgs/dashboard-imgs/dots.svg" alt="">
+                                            </div>
+                                            <div class="menu-rapido">
+                                                <div class="menu-rapido-icon"><img src="../imgs/dashboard-imgs/editar.svg" alt=""></div>
+                                                <div class="menu-rapido-icon"><img src="../imgs/dashboard-imgs/trashcan.svg" alt=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="oferta-info-contenedor">
+                
+                                        <div class="oferta-nombre">
+                                            <a href=""><h3>Titulo de anuncio</h3></a>
+                                            <p>#hotal #restaurante #viaje #oferta</p>
+                                        </div>
+                
+                                        <div class="oferta-fecha-contenedor">
+                                            <img src="../imgs/dashboard-imgs/calendar.svg" alt="">
+                                            <p class="oferta-fecha">5. Sep 2019 - 10. Sep 2019</p>
+                                        </div>
+                
+                                        <p class="oferta-descripcion">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tempore necessitatibus ex ad. Recusandae ex, magni vel eius incidunt odio!
+                                        </p>
+                
+                                        <div class="oferta-abajo">
+                                            <div class="likes-coment">
+                                                <img src="../imgs/dashboard-imgs/heart.svg" alt="">
+                                                <span>45</span>
+                                                <img src="../imgs/dashboard-imgs/comentario.svg" alt="">
+                                                <span>33</span>
+                                            </div>
+                                            <div class="precio">
+                                                $69.99 <span>/ noche</span>
+                                            </div>
+                                        </div>
+                
+                                    </div>
+                
+                                </div>
+                <!-- dummy card end -->

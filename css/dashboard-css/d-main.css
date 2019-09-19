@@ -871,18 +871,26 @@ div.ofertas-contenedor .oferta-tarjeta {
     align-items: flex-end;
 }
 
+.oferta-tarjeta .parte-img .menu-rapido-contenedor .caja-puntos {
+    /* border: 1px solid blue; */
+    width: 15px;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
 .oferta-tarjeta .parte-img .menu-rapido-contenedor .puntos {
     width: 5px;
     height: auto;
     margin-bottom: 8px;
-    cursor: pointer;
 }
 
 .menu-rapido-contenedor .menu-rapido {
     display: flex;
     flex-direction: column;
-    transform: translateY(-100%);
-    opacity: 0;
+    overflow: hidden;
+    opacity: 1;
 }
 
 .menu-rapido-contenedor .menu-rapido .menu-rapido-icon {
@@ -897,6 +905,7 @@ div.ofertas-contenedor .oferta-tarjeta {
     box-shadow: 0 3px 6px var(--shadow);
     transition: background 0.2s;
     cursor: pointer;
+    transform: translateY(-160px);
 }
 
 .menu-rapido-contenedor .menu-rapido .menu-rapido-icon:hover {
@@ -974,14 +983,108 @@ div.ofertas-contenedor .oferta-tarjeta {
     margin-right: 8px;
 }
 
-.oferta-info-contenedor .oferta-abajo .precio {
+.oferta-info-contenedor .oferta-abajo .precio,
+.oferta-abajo-lista .info-numero .precio {
     font-weight: bold;
 }
 
-.oferta-info-contenedor .oferta-abajo .precio span {
+.oferta-info-contenedor .oferta-abajo .precio span,
+.oferta-abajo-lista .info-numero .precio span {
     font-size: 0.8rem;
     color: var(--dark-gris);
     font-weight: normal;
 }
 
 
+/* %%%%% oferta - vista (version lista) css */
+
+div.oferta-tarjeta-lista-contenedor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.oferta-tarjeta-lista {
+    width: 100%;
+    height: 180px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+}
+
+.oferta-tarjeta-lista .oferta-lista-img {
+    width: 250px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.oferta-info-contenedor-lista {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 3px 6px var(--shadow);
+}
+
+.oferta-info-contenedor-lista .oferta-nombre-lista {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.oferta-info-contenedor-lista .oferta-nombre-lista h3 {
+    font-size: 1.2rem;
+    color: var(--font-color);
+    font-family: var(--montserrat);
+    margin-right: 1.5rem;
+}
+
+.oferta-info-contenedor-lista .oferta-nombre-lista p {
+    font-size: 0.8rem;
+}
+
+.oferta-fecha-contenedor-lista {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.oferta-fecha-contenedor-lista img {
+    width: 15px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.oferta-fecha-contenedor-lista .oferta-fecha {
+    color: var(--main-rojo);
+    font-weight: bold;
+}
+
+
+.oferta-abajo-lista {
+    display: flex;
+}
+
+.oferta-abajo-lista .oferta-descripcion {
+    font-size: 0.9rem;
+    flex: 2;
+}
+
+.oferta-abajo-lista .info-numero {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.oferta-abajo-lista .info-numero img {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.oferta-abajo-lista .info-numero .likes-coment {
+    display: flex;
+    align-items: center;
+}
