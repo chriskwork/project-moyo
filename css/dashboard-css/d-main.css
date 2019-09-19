@@ -264,7 +264,7 @@ section .arriba p.saludar {
 }
 
 a.nueva-oferta {
-    padding: 5px 10px;
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -386,8 +386,8 @@ a.icon-enlace div.ir-pagina {
 .dash-oferta-tarjetas .targeta {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
-    min-width: 250px;
+    max-width: 250px;
+    min-width: 230px;
     height: auto;
     border: 1px solid var(--light-gris);
     border-radius: 10px;
@@ -695,7 +695,54 @@ section.dashboard-negocio {
     margin-right: 0.5rem;
 }
 
+.negocio-dato-contenedor .botones {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
 
+.negocio-dato-contenedor .botones .editar-perfil {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    background: var(--point-naranja);
+    border-radius: 25px;
+    margin-right: 1rem;
+}
+
+.negocio-dato-contenedor .botones .editar-perfil img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.negocio-dato-contenedor .botones .editar-perfil:hover {
+    box-shadow: 0 3px 6px var(--shadow);
+}
+
+
+.negocio-dato-contenedor .negocio-galaria {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 3rem;
+}
+
+.negocio-dato-contenedor .negocio-galaria img {
+    margin-right: 1rem;
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.negocio-dato-contenedor .negocio-galaria img:last-child {
+    margin-right: 0;
+}
 
 
 
