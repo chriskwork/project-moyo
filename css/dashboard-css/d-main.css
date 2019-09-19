@@ -245,6 +245,7 @@ section.dashboard-info-contenedor {
     width: 80%;
     max-width: 1920px;
     height: 100%;
+    min-height: 100vh;
     padding: 2rem;
     position: relative;
 }
@@ -256,7 +257,7 @@ section div.arriba {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 section .arriba p.saludar {
@@ -745,8 +746,6 @@ section.dashboard-negocio {
 }
 
 
-
-
 .negocio-dato-contenedor .dato-header .negocio-likes img {
     width: 15px;
     height: 15px;
@@ -756,3 +755,233 @@ section.dashboard-negocio {
     width: 15px;
     height: 15px;
 }
+
+
+/* ################################# CSS - oferta y evento  */
+
+.arriba p.menu-titulo {
+    font-family: var(--montserrat);
+}
+
+.optionDiv {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.optionDiv figure {
+    display: flex;
+    align-items: center;
+}
+
+.optionDiv figure svg.opcion-vista {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    fill: var(--dark-gris);
+}
+
+.optionDiv figure svg.opcion-vista-actual {
+    fill: var(--font-color);
+}
+
+.optionDiv figure svg:hover {
+    fill: var(--font-color);
+}
+
+.optionDiv .buscar,
+.optionDiv .option-vista {
+    margin-right: 0.5rem;
+}
+
+.optionDiv .buscar {
+    display: flex;
+    position: relative;
+}
+
+.optionDiv .buscar input {
+    width: 250px;
+    padding: 5px 10px;
+    border: 1px solid var(--dark-gris);
+    border-radius: 20px;
+}
+
+.optionDiv .buscar img {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.optionDiv img.boton-anadir {
+    width: 24px;
+    height: 24px;
+    margin-left: 0.5rem;
+}
+
+.optionDiv .buscar input:focus {
+    border: 1px solid var(--main-rojo);
+}
+
+/* parte oferta: tarjatas (galaria) */
+
+div.ofertas-contenedor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div.ofertas-contenedor .oferta-tarjeta {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    min-width: 250px;
+    height: auto;
+    border: 1px solid var(--light-gris);
+    border-radius: 10px;
+    margin: 0 1.5rem 1.5rem 0;
+    background: #fff;
+    box-shadow: 0 3px 6px var(--shadow);
+}
+
+.oferta-tarjeta .parte-img {
+    position: relative;
+}
+
+.oferta-tarjeta .parte-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.oferta-tarjeta .parte-img .menu-rapido-contenedor {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.oferta-tarjeta .parte-img .menu-rapido-contenedor .puntos {
+    width: 5px;
+    height: auto;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.menu-rapido-contenedor .menu-rapido {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.menu-rapido-contenedor .menu-rapido .menu-rapido-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    box-shadow: 0 3px 6px var(--shadow);
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.menu-rapido-contenedor .menu-rapido .menu-rapido-icon:hover {
+    background: #fff;
+}
+
+.menu-rapido-contenedor .menu-rapido .menu-rapido-icon img {
+    width: 24px;
+    height: auto;
+}
+
+
+.oferta-tarjeta .oferta-info-contenedor {
+    padding: 5px 10px;
+}
+
+.oferta-info-contenedor .oferta-nombre {
+    margin-bottom: 10px;
+}
+
+.oferta-info-contenedor .oferta-nombre a {
+    color: var(--font-color);
+    font-size: 1rem;
+    font-family: var(--montserrat);
+}
+
+.oferta-info-contenedor .oferta-nombre a:hover {
+    color: var(--dark-gris);
+}
+
+.oferta-info-contenedor .oferta-nombre p {
+    font-size: 0.8rem;
+}
+
+.oferta-info-contenedor .oferta-fecha-contenedor {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.oferta-info-contenedor .oferta-fecha-contenedor img {
+    width: 15px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.oferta-info-contenedor .oferta-fecha-contenedor p.oferta-fecha {
+    color: var(--main-rojo);
+    font-weight: bold;
+}
+
+.oferta-info-contenedor p.oferta-descripcion {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.oferta-info-contenedor .oferta-abajo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.oferta-info-contenedor .oferta-abajo .likes-coment {
+    display: flex;
+    align-items: center;
+}
+
+.oferta-info-contenedor .oferta-abajo .likes-coment img {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.oferta-info-contenedor .oferta-abajo .likes-coment span {
+    margin-right: 8px;
+}
+
+.oferta-info-contenedor .oferta-abajo .precio {
+    font-weight: bold;
+}
+
+.oferta-info-contenedor .oferta-abajo .precio span {
+    font-size: 0.8rem;
+    color: var(--dark-gris);
+    font-weight: normal;
+}
+
+
