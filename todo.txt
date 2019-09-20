@@ -1,0 +1,8 @@
+# price plan - icon in boton
+
+# index - font awesome icons -> change with my icon
+# asi quedaria... - calendar icon
+precio lil bit smaller
+
+mensaje bubble chat how??
+

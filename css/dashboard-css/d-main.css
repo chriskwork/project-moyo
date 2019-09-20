@@ -264,7 +264,7 @@ section .arriba p.saludar {
     font-size: 1.1rem;
 }
 
-a.nueva-oferta {
+a.nueva-oferta, button.nuevo-mensaje {
     padding: 10px 20px;
     display: flex;
     justify-content: center;
@@ -280,7 +280,8 @@ a.nueva-oferta img {
     margin-right: 5px;
 }
 
-a.nueva-oferta:hover {
+a.nueva-oferta:hover,
+button.nuevo-mensaje:hover {
     box-shadow: 0 3px 6px var(--shadow);
 }
 
@@ -488,7 +489,7 @@ a.icon-enlace div.ir-pagina {
 
 
 
-/* ################## mensajes nuevos */
+/* ################## pagina inicio - mensajes nuevos */
 
 .mensaje {
     border: 1px solid var(--light-gris);
@@ -497,6 +498,7 @@ a.icon-enlace div.ir-pagina {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    background: #fff;
 }
 
 .mensaje:last-child {
@@ -1013,7 +1015,70 @@ div.oferta-tarjeta-lista-contenedor {
     border-radius: 10px;
     display: flex;
     margin-bottom: 1rem;
+    position: relative;
 }
+
+/* menu rapido */
+
+.menu-rapido-contenedor-lista {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.menu-rapido-contenedor-lista .caja-puntos-lista {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+.menu-rapido-contenedor-lista .puntos-lista {
+    width: 5px;
+    height: auto;
+}
+
+.menu-rapido-contenedor-lista .menu-rapido-lista {
+    width: 120px;
+    display: flex;
+    overflow: hidden;
+}
+
+.menu-rapido-contenedor-lista .menu-rapido-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 4px;
+    box-shadow: 0 3px 6px var(--shadow);
+    transition: background 0.2s;
+    cursor: pointer;
+    transform: translateX(160px);
+}
+
+.menu-rapido-contenedor-lista .menu-rapido-icon:hover {
+    background: #fff;
+}
+
+.menu-rapido-contenedor-lista .menu-rapido-icon img {
+    width: 24px;
+    height: auto;
+}
+
+
+
+
+
+
+
 
 .oferta-tarjeta-lista .oferta-lista-img {
     width: 250px;
@@ -1100,3 +1165,6 @@ div.oferta-tarjeta-lista-contenedor {
     color: var(--dark-gris);
     font-weight: normal;
 }
+
+
+/* TODO: Mensajes page */
