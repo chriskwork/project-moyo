@@ -319,3 +319,58 @@ for(i = 0; i < title.length; ++) {
                 
                                 </div>
                 <!-- dummy card end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Gratis
+0€
+Panel de Control
+Negocio
+Y anuncios o Eventos Previo Pago 
+9,99 €
+
+*Profesional
+25€
+Panel de ControlNegocio
+Anuncios (sin limite)
+Eventos (sin limite)
+Mensajería (whatsap privado )
+Estadísticas
+Asesoramiento Estándar
+
+*Premium ( Best Value ) 
+39€
+Panel de ControlNegocios ( Varias Sucursales)
+Anuncios (sin limite)
+Eventos (sin limite)
+Mensajería (whatsap privado )
+Estadísticas
+Asesoramiento Premium
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

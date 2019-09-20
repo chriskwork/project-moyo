@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+
 :root {
     --blanco: #fff;
     --main-rojo: #F64747;
     --border-color: #C9C9C9;
+    --font-color: #333;
     --width: 1366px;
+    --dark-gris: #aaaaaa;
+    --point-naranja: #f0a721;
     --point-morado: #a157e3;
+    --light-gris: rgb(230, 230, 230);
+    --shadow: rgba(172, 90, 90, 0.15);
     --roboto: 'Roboto', Arial, sans-serif;
     --montserrat: 'Montserrat', sans-serif;
 }
@@ -532,6 +540,204 @@ index.html css hasta aqui
     background: var(--main-rojo);
     color: var(--blanco);
 }
+
+
+/* =============================================================== */
+/* ################################# panel de precio CSS */
+/* =============================================================== */
+
+div.panel-precio-contenedor {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 2rem;
+}
+
+div.panel-precio-card {
+    width: 260px;
+    margin-right: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 6px var(--shadow);
+}
+
+div.panel-precio-card:last-child {
+    margin-right: 0;
+}
+
+
+.panel-opcion {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 1.2rem;
+    height: 80px;
+    border-radius: 10px 10px 0 0;
+}
+
+.panel-opcion.gratis {
+    background: radial-gradient(circle at top left, #fff, var(--point-naranja));
+}
+
+.panel-opcion.profesional {
+    background: radial-gradient(circle at top left, #fff, var(--main-rojo));
+}
+
+.panel-opcion.premium {
+    background: radial-gradient(circle at top left, #fff, var(--point-morado));
+    position: relative;
+}
+
+.bestValue {
+    position: absolute;
+    font-family: var(--roboto);
+    color: #fff;
+    font-weight: normal;
+    background: rgb(56, 139, 216);
+    font-size: 0.7rem;
+    padding: 3px 15px;
+    box-shadow: 0 3px 6px var(--shadow);
+    top: -10px;
+    right: 0;
+    /* border-radius: 0 10px 0 0; */
+}
+
+
+
+
+.panel-opcion, .panel-precio {
+    display: flex;
+    justify-content: center;
+}
+
+.panel-opcion {
+    align-items: center;
+}
+
+.panel-precio {
+    font-size: 3rem;
+    align-items: baseline;
+}
+
+.panel-precio span.euro {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.panel-precio span.mes {
+    font-size: 1rem;
+    color: var(--dark-gris);
+}
+
+.panel-incluido {
+    padding: 0 1.5rem;
+    font-size: 0.8rem;
+    height: 160px;
+    color: #575757;
+}
+
+.panel-incluido ul li {
+    list-style-type: none;
+}
+
+.panel-incluido ul li::before {
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1em;
+}
+
+.panel-incluido .gratis-list li::before {
+    color: var(--point-naranja);
+}
+
+.panel-incluido .profesional-list li::before {
+    color: var(--main-rojo);
+}
+
+.panel-incluido .premium-list li::before {
+    color: var(--point-morado);
+}
+
+
+
+.panel-precio-card .panel-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-precio-card .panel-boton a {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    background: rgb(211, 211, 211);
+    border-radius: 0 0 10px 10px;
+    font-size: 0.8rem;
+    color: var(--font-color);
+}
+
+.panel-precio-card .panel-boton a span.boton-icon {
+    display: none;
+    margin-right: 5px;
+}
+
+.panel-precio-card .panel-boton a:hover span.boton-icon {
+    display: inline-block;
+}
+
+
+.panel-precio-card .panel-boton a.boton-gratis:hover {
+    background: var(--point-naranja);
+}
+
+.panel-precio-card .panel-boton a.boton-pro:hover {
+    background: var(--main-rojo);
+}
+
+.panel-precio-card .panel-boton a.boton-premium:hover {
+    background: var(--point-morado);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

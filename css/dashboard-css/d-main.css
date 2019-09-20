@@ -689,6 +689,7 @@ section.dashboard-negocio {
     border-left: 4px solid var(--main-rojo);
     padding-left: 2rem;
     margin-bottom: 2rem;
+    font-size: 0.85rem;
 }
 
 .negocio-info .info-label {
@@ -1011,6 +1012,7 @@ div.oferta-tarjeta-lista-contenedor {
     background: #fff;
     border-radius: 10px;
     display: flex;
+    margin-bottom: 1rem;
 }
 
 .oferta-tarjeta-lista .oferta-lista-img {
@@ -1062,29 +1064,39 @@ div.oferta-tarjeta-lista-contenedor {
 }
 
 
-.oferta-abajo-lista {
-    display: flex;
-}
-
-.oferta-abajo-lista .oferta-descripcion {
+.oferta-descripcion {
     font-size: 0.9rem;
     flex: 2;
 }
 
-.oferta-abajo-lista .info-numero {
+.info-numero {
     flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
 
-.oferta-abajo-lista .info-numero img {
+.info-numero img {
     width: 20px;
     height: auto;
-    margin-right: 5px;
+    /* margin-right: 5px; */
 }
 
-.oferta-abajo-lista .info-numero .likes-coment {
+.info-numero .likes-coment {
     display: flex;
     align-items: center;
+}
+
+.info-numero .likes-coment * {
+    margin-left: 5px;
+}
+
+.info-numero .precio {
+    font-weight: bold;
+}
+
+.info-numero .precio span {
+    font-size: 0.8rem;
+    color: var(--dark-gris);
+    font-weight: normal;
 }
