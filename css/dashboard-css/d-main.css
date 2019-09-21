@@ -1168,3 +1168,43 @@ div.oferta-tarjeta-lista-contenedor {
 
 
 /* TODO: Mensajes page */
+
+button.nuevo-mensaje {
+    border: 0;
+}
+
+.mensaje-big-contenedor {
+    display: flex;
+}
+
+.mensaje-big-contenedor .mensajes-buzon {
+    margin-right: 1rem;
+    background: var(--blanco);
+    min-width: 380px;
+    width: 40%;
+    padding: 10px;
+}
+
+.mensaje-big-contenedor .mensajes-buzon p.texto-buzon {
+    font-family: var(--montserrat);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.mensaje-big-contenedor .mensajes-buzon .mensaje {
+    padding: 10px;
+}
+
+.mensaje-big-contenedor .mensajes-buzon .mensaje:hover {
+    box-shadow: 0 3px 6px var(--shadow);
+}
+
+
+/* mensaje : conversacion */
+
+.mensaje-big-contenedor .mensaje-conversacion {
+    background: var(--blanco);
+    width: 60%;
+    padding: 10px;
+}
+
