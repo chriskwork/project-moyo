@@ -1074,11 +1074,7 @@ div.oferta-tarjeta-lista-contenedor {
 }
 
 
-
-
-
-
-
+/* tarjetas de oferta  */
 
 .oferta-tarjeta-lista .oferta-lista-img {
     width: 250px;
@@ -1167,10 +1163,17 @@ div.oferta-tarjeta-lista-contenedor {
 }
 
 
-/* TODO: Mensajes page */
+/* Mensajes page */
 
 button.nuevo-mensaje {
     border: 0;
+    cursor: pointer;
+}
+
+button.nuevo-mensaje img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
 }
 
 .mensaje-big-contenedor {
@@ -1208,3 +1211,155 @@ button.nuevo-mensaje {
     padding: 10px;
 }
 
+
+
+
+
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Estadistica - css */
+
+
+div.estadis-fecha-input {
+    display: flex;
+    font-size: 0.8rem;
+    align-items: center;
+}
+
+div.estadis-fecha-input * {
+    margin-left: 10px;
+}
+
+div.estadis-fecha-input input[type=date] {
+    font-size: 0.9rem;
+    height: 30px;
+    border-radius: 5px;
+    border: var(--light-gris);
+    padding: 5px;
+}
+
+div.estadis-fecha-input button {
+    height: 30px;
+    width: 80px;
+    border: 0;
+    background: #f3f3f3;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+div.estadistica-contenedor {
+    background: var(--blanco);
+    padding: 1rem;
+}
+
+div.estadistica-contenedor .estadis-header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+}
+
+.estadis-header p.periodo {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.estadis-header span {
+    font-size: 0.7rem;
+    margin-right: 1rem;
+}
+
+.estadis-header select {
+    width: 120px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--light-gris);
+}
+
+
+div.estadistica-contenedor .estadis-grafico {
+    width: 90%;
+    margin: 0 auto;
+}
+
+div.estadistica-contenedor .chart-total-info {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+div.estadistica-contenedor .chart-total-info div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--light-gris);
+    width: 30%;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+div.estadistica-contenedor .chart-total-info img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+div.estadistica-contenedor .chart-total-info img.chart-info-ojo {
+    width: 40px;
+}
+
+
+/* estadistica - otro info */
+
+div.estadis-otroInfo-contenedor {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+div.estadis-tag,
+div.lugar-visitado {
+    width: 49%;
+    background: var(--blanco);
+    padding: 1rem;
+}
+
+p.otroInfo-titulo {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.porcentage-contenedor {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 0 1rem;
+}
+
+.porcentage-contenedor .porcentage {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+
+.porcentage-contenedor .porcentage .hashtag {
+    width: 20%;
+    margin-right: 10px;
+}
+
+.porcentage-contenedor .porcentage .barra {
+    width: 60%;
+    height: 12px;
+    border: 1px solid var(--light-gris);
+    margin-right: 10px;
+}
+
+.porcentage-contenedor .porcentage .barra-verde {
+    height: 12px;
+    background: #54da54;
+}
