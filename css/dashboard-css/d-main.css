@@ -499,6 +499,7 @@ a.icon-enlace div.ir-pagina {
     align-items: center;
     margin-bottom: 10px;
     background: #fff;
+    padding: 10px;
 }
 
 .mensaje:last-child {
@@ -506,10 +507,10 @@ a.icon-enlace div.ir-pagina {
 }
 
 .mensaje .foto-contenedor {
-    width: 60px;
-    min-width: 60px;
-    height: 80px;
-    flex: 1;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
     margin-right: 10px;
     display: flex;
     justify-content: center;
@@ -518,8 +519,8 @@ a.icon-enlace div.ir-pagina {
 }
 
 .mensaje .foto-contenedor .mensaje-foto {
-    width: 60px;
-    height: 60px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
     /* position: relative; */
@@ -532,8 +533,8 @@ a.icon-enlace div.ir-pagina {
     height: 16px;
     border: 2px solid #fff;
     border-radius: 50%;
-    right: 8px;
-    bottom: 8px;
+    right: 0;
+    bottom: 0;
 }
 
 .mensaje .foto-contenedor .offline {
@@ -545,7 +546,6 @@ a.icon-enlace div.ir-pagina {
 }
 
 .mensaje .mensaje-datos-contenedor {
-    flex: 4;
     display: flex;
     flex-direction: column;
     padding-right: 15px;
@@ -1189,9 +1189,17 @@ button.nuevo-mensaje img {
     width: 40%;
     padding: 10px;
     max-height: 80vh;
+    min-height: 500px;
     overflow: auto;
     scrollbar-color: blue;
+
 }
+
+/* .mensaje-big-contenedor .mensajes-buzon .mensaje
+div.foto-contenedor img {
+    width: 40px;
+    height: 40px;
+} */
 
 .mensaje-big-contenedor .mensajes-buzon p.texto-buzon {
     font-family: var(--montserrat);
@@ -1213,19 +1221,22 @@ button.nuevo-mensaje img {
 .mensaje-big-contenedor .mensaje-conversacion {
     background: var(--blanco);
     width: 60%;
-    padding: 20px;
     max-height: 80vh;
-    
+    position: relative;
+    min-height: 500px;
 }
 
 .mensaje-conversacion .mensaje-usuario {
     display: flex;
     width: 100%;
+    height: 12%;
+    min-height: 70px;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
+    /* margin-bottom: 1rem; */
+    padding: 0.5rem 1rem;
     box-shadow: 0 4px 6px var(--shadow);
+    z-index: 1;
 }
 
 .mensaje-conversacion .mensaje-usuario .usuario-info {
@@ -1236,8 +1247,8 @@ button.nuevo-mensaje img {
 }
 
 .mensaje-conversacion .mensaje-usuario .usuario-info img.usuario-foto {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -1264,27 +1275,61 @@ button.nuevo-mensaje img {
    
 }
 
+/* pantalla de conversacion */
+
 .pantalla-conversacion {
     width: 100%;
     height: 80%;
     overflow: auto;
+    padding: 12px;
+    /* position: relative; */
+    background-image: url('../../imgs/section/path-icon-transparent-opacity.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
 }
+
+/* .pantalla-conversacion::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../imgs/section/path-icon-transparent-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+} */
 
 .pantalla-conversacion .mensaje-cliente {
     width: 45%;
     height: auto;
     background: rgb(228, 228, 228);
     border-radius: 15px;
-    padding: 10px;
+    padding: 12px;
     margin-left: 16px;
     font-size: 0.9rem;
     box-shadow: 0 5px 6px var(--shadow);
     position: relative;
 }
 
-/* TODO: */
+.pantalla-conversacion .mensaje-cliente::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: -8px;
+    border-top: 8px solid transparent; 
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #e4e4e4;
+}
+
 /* .pantalla-conversacion .mensaje-cliente::after */
 /* triangle */
+
 
 .pantalla-conversacion .mensaje-mio-contenedor {
     display: flex;
@@ -1296,34 +1341,81 @@ button.nuevo-mensaje img {
     height: auto;
     background: rgb(255, 156, 250);
     border-radius: 15px;
-    padding: 10px;
+    padding: 12px;
     margin-right: 16px;
     font-size: 0.9rem;
     box-shadow: 0 5px 6px var(--shadow);
     position: relative;
 }
 
+.pantalla-conversacion .mensaje-mio::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 50%;
+    right: -8px;
+    border-top: 8px solid transparent; 
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid rgb(255, 156, 250);
+}
+
+.mensaje-cliente-contenedor,
+.mensaje-mio-contenedor {
+    margin: 5px 0;
+}
+
+/* mansaje conversacion input (parte abajo) */
 
 .mensaje-conversacion .conversacion-abajo {
     width: 100%;
-    height: auto;
+    height: 7%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-.conversacion-abajo {
+.conversacion-abajo form.enviar-mensaje-form {
     width: 100%;
-    height: auto;
-    border: 1px solid red;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.conversacion-abajo input.mensaje-input {
+    width: 80%;
+    height: 100%;
+    border: 1px solid var(--dark-gris);
+    padding: 5px 10px;
+}
+
+.conversacion-abajo input.mensaje-input:focus {
+    border: 1px solid var(--point-morado);
+}
+
+.conversacion-abajo button.mensaje-button {
+    width: 20%;
+    height: 100%;
+    background: var(--dark-gris);
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.conversacion-abajo button.mensaje-button img {
+    width: 25px;
+    height: 25px;
+}
+
+.conversacion-abajo button.mensaje-button:hover {
+    background: var(--point-morado);
+}
+
+
+
 
 
 
