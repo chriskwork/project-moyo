@@ -1,5 +1,5 @@
 // ######### dashboard - estadistica chart.js
-// ##########################################################################################
+// ###########################################
 
 const myChart = document.getElementById('myChart');
 
@@ -36,19 +36,65 @@ if(myChart) {
 
 
 
-// ######### dashboard - oferta y eventos slide
-// ##########################################################################################
+// ######### modal - nueva oferta
+// dashboard inicio
+// ###########################################
 
-const botonIzq = document.querySelector(".slide-left");
-const botonDer = document.querySelector(".slide-right");
-const tarjeta = document.querySelectorAll(".targeta");
+const nuevaOferta = document.querySelector(".nueva-oferta");
+const modalDiv = document.querySelector(".modal");
 
-// botonIzq.addEventListener("click", () => {
-//     targeta.style.transform = "translateX(-500px)";
-// });
+const cerrarModal = document.querySelector(".modal-cerrar");
+const cancelarModal = document.querySelector(".modal-cancelar");
 
-// botonDer.addEventListener("click", () => {
-//     targeta.style.transform = "translateX(-500px)";
-// });
+if(nuevaOferta) {
+    nuevaOferta.addEventListener("click", (e) => {
+
+        e.preventDefault();
+        
+        modalDiv.style.display = "block";    
+    
+        cerrarModal.addEventListener("click", () => {
+            modalDiv.style.display = "none";
+        });
+        cancelarModal.addEventListener("click", (e) => {
+            e.preventDefault();
+            modalDiv.style.display = "none";
+        });
+
+    });
+}
+
+
+
+// ######### modal - nueva oferta
+// pagina ofertas y eventos
+// ###########################################
+
+const nuevaOfertaIcon = document.querySelector(".boton-anadir");
+
+if(nuevaOfertaIcon) {
+    nuevaOfertaIcon.addEventListener("click", (e) => {
+
+        e.preventDefault();
+        
+        modalDiv.style.display = "block";    
+    
+        cerrarModal.addEventListener("click", () => {
+            modalDiv.style.display = "none";
+        });
+        cancelarModal.addEventListener("click", (e) => {
+            e.preventDefault();
+            modalDiv.style.display = "none";
+        });
+    
+    });
+}
+
+
+
+
+
+
+
 
 

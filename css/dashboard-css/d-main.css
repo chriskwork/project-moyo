@@ -20,7 +20,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    line-height: 1.6;
+    line-height: 1.4;
     outline: none;
 }
 
@@ -506,7 +506,8 @@ a.icon-enlace div.ir-pagina {
 }
 
 .mensaje .foto-contenedor {
-    max-width: 80px;
+    width: 60px;
+    min-width: 60px;
     height: 80px;
     flex: 1;
     margin-right: 10px;
@@ -521,7 +522,7 @@ a.icon-enlace div.ir-pagina {
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    position: relative;
+    /* position: relative; */
 }
 
 .mensaje .foto-contenedor .offline,
@@ -531,8 +532,8 @@ a.icon-enlace div.ir-pagina {
     height: 16px;
     border: 2px solid #fff;
     border-radius: 50%;
-    right: 10px;
-    bottom: 10px;
+    right: 8px;
+    bottom: 8px;
 }
 
 .mensaje .foto-contenedor .offline {
@@ -824,6 +825,7 @@ section.dashboard-negocio {
     width: 24px;
     height: 24px;
     margin-left: 0.5rem;
+    cursor: pointer;
 }
 
 .optionDiv .buscar input:focus {
@@ -1186,6 +1188,9 @@ button.nuevo-mensaje img {
     min-width: 380px;
     width: 40%;
     padding: 10px;
+    max-height: 80vh;
+    overflow: auto;
+    scrollbar-color: blue;
 }
 
 .mensaje-big-contenedor .mensajes-buzon p.texto-buzon {
@@ -1208,8 +1213,126 @@ button.nuevo-mensaje img {
 .mensaje-big-contenedor .mensaje-conversacion {
     background: var(--blanco);
     width: 60%;
-    padding: 10px;
+    padding: 20px;
+    max-height: 80vh;
+    
 }
+
+.mensaje-conversacion .mensaje-usuario {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.mensaje-conversacion .mensaje-usuario .usuario-info {
+    display: flex;
+    align-items: center;
+    font-family: var(--montserrat);
+    font-weight: bold;
+}
+
+.mensaje-conversacion .mensaje-usuario .usuario-info img.usuario-foto {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.mensaje-conversacion .mensaje-usuario .usuario-info span.isOnline {
+    font-family: var(--roboto);
+    font-weight: normal;
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+.mensaje-conversacion .mensaje-usuario .usuario-menu-box {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mensaje-conversacion .mensaje-usuario img.usuario-menu {
+    transform: rotate(90deg);
+    width: 5px;
+    height: auto;
+   
+}
+
+.pantalla-conversacion {
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+}
+
+.pantalla-conversacion .mensaje-cliente {
+    width: 45%;
+    height: auto;
+    background: rgb(228, 228, 228);
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 16px;
+    font-size: 0.9rem;
+    box-shadow: 0 5px 6px var(--shadow);
+    position: relative;
+}
+
+/* TODO: */
+/* .pantalla-conversacion .mensaje-cliente::after */
+/* triangle */
+
+.pantalla-conversacion .mensaje-mio-contenedor {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pantalla-conversacion .mensaje-mio {
+    width: 45%;
+    height: auto;
+    background: rgb(255, 156, 250);
+    border-radius: 15px;
+    padding: 10px;
+    margin-right: 16px;
+    font-size: 0.9rem;
+    box-shadow: 0 5px 6px var(--shadow);
+    position: relative;
+}
+
+
+.mensaje-conversacion .conversacion-abajo {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+.conversacion-abajo {
+    width: 100%;
+    height: auto;
+    border: 1px solid red;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1363,3 +1486,235 @@ p.otroInfo-titulo {
     height: 12px;
     background: #54da54;
 }
+
+
+
+
+
+
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Pagina Modal - nueva oferta, editar oferta, borrar oferta 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+
+div.modal,
+div.modal-editar,
+div.modal-borrar {
+    display: none;
+    width: 100vw;
+    height: 100%;
+    max-width: 1920px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.65);
+    padding: 3rem 0;
+    overflow: auto;
+    scrollbar-width: 5px;
+    scrollbar-shadow-color: #333;
+}
+
+div.modal-content {
+    width: 80%;
+    max-width: 1280px;
+    height: auto;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+div.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+div.modal-header img {
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+}
+
+form.modal-form .modal-form-box {
+    margin-bottom: 1rem;
+}
+form.modal-form .modal-form-box:last-child {
+    margin-bottom: 0;
+}
+
+div.modal-form-box .modal-nombre {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+div.modal-form-box input[type=text],
+div.modal-form-box textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #c9c9c9;
+    border-radius: 15px;
+}
+
+div.modal-form-box input:focus,
+div.modal-form-box textarea:focus {
+    border: 1px solid var(--main-rojo);
+}
+
+
+div.modal-form-box label.buscar-foto { /* buscar archivo boton */
+    background: var(--dark-gris);
+    padding: 8px 15px;
+    color: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+div.modal-form-box label.buscar-foto:hover {
+    background: var(--main-rojo);
+}
+
+div.modal-form-box input[type=file] {
+    display: none;
+}
+
+div.modal-form-box span.foto-portada-help {
+    font-size: 0.8rem;
+    color: var(--dark-gris);
+}
+
+
+div.modal-form-box .form-fotos {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    align-items: center;
+}
+
+div.modal-form-box .form-fotos .form-foto {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #c9c9c9;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.modal-form-box .form-fotos svg#modal-add-foto {
+    width: 40px;
+    height: 40px;
+    fill: var(--dark-gris);
+    cursor: pointer;
+}
+
+.modal-form-box .form-fotos svg#modal-add-foto:hover {
+    fill: var(--main-rojo);
+}
+
+
+div.modal-form-box textarea {
+    resize: vertical;
+}
+
+div.modal-form-box input[type=date] {
+    padding: 8px 10px;
+    border: 1px solid #c9c9c9;
+    border-radius: 15px;
+}
+
+div.modal-form-box span.fecha-menos {
+    margin: 0 5px;
+}
+
+div.modal-form-box span.modal-help {
+    font-size: 0.8rem;
+    color: var(--dark-gris);
+}
+
+
+form.modal-form .modal-botones {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+form.modal-form .modal-botones button {
+    width: 100px;
+    height: 40px;
+    border: 0;
+    border-radius: 15px;
+    margin-left: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+form.modal-form .modal-botones button:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.45);
+}
+
+form.modal-form .modal-botones button.modal-cancelar {
+    background: #c9c9c9;
+}
+
+form.modal-form .modal-botones button.modal-enviar {
+    background: var(--main-rojo);
+}
+
+
+/* modal borrar oferta */
+
+div.modal-borrar .borrar-box {
+    width: 30%;
+    height: 150px;
+    position: absolute;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.modal-borrar .borrar-botones {
+    margin-top: 1rem;
+}
+
+div.modal-borrar .borrar-botones button {
+    width: 80px;
+    height: 40px;
+    margin: 0 5px;
+    border: 0;
+    background: #c9c9c9;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+div.modal-borrar .borrar-botones button:hover {
+    background: var(--main-rojo);
+    color: #fff;
+}
+
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Pagina Modal css terminado
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+
+
+
+
+

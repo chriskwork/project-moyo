@@ -1,8 +1,14 @@
 # price plan - icon in boton
 
 # index - font awesome icons -> change with my icon
+
 # asi quedaria... - calendar icon
-precio lil bit smaller
+    precio lil bit smaller
 
-mensaje bubble chat how??
+# mensaje bubble chat how??
 
+# nuevo anuncio, editar anuncio, borrar modal page 
+
+# configuracion page
+
+# anuncio detail page
