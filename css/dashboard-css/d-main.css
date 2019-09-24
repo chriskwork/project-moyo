@@ -69,7 +69,16 @@ header .logo-perfil {
 }
 
 header .logo {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo img.dshboard-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
 }
 
 header .logo a {
@@ -760,7 +769,7 @@ section.dashboard-negocio {
     height: 15px;
 }
 
-
+/* ################################################################################################### */
 /* ################################# CSS - oferta y evento  */
 
 .arriba p.menu-titulo {
@@ -846,7 +855,8 @@ div.ofertas-contenedor {
 div.ofertas-contenedor .oferta-tarjeta {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    
+    max-width: 270px;
     min-width: 250px;
     height: auto;
     border: 1px solid var(--light-gris);
@@ -1419,19 +1429,6 @@ div.foto-contenedor img {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Estadistica - css */
 
@@ -1463,8 +1460,10 @@ div.estadis-fecha-input button {
     border-radius: 5px;
 }
 
-div.estadistica-contenedor {
+div.estadistica-contenedor,
+div.config-contenedor {
     background: var(--blanco);
+    width: 100%;
     padding: 1rem;
 }
 
@@ -1802,11 +1801,98 @@ div.modal-borrar .borrar-botones button:hover {
 
 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Pagina Modal css terminado
+############################ Pagina Modal css terminado
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
 
 
 
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+################## configuracion
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+input.test {
+    border: 0;
+    background: transparent;
+    pointer-events: none;
+    
+}
+
+span.testspan {
+    cursor: pointer;
+}
 
 
+div.config-contenedor {
+    display: flex;
+    align-items: flex-start;
+    padding: 3rem;
+}
+
+.config-perfil-foto {
+    margin-right: 4rem;
+    width: 160px;
+    height: 160px;
+}
+
+.config-perfil-foto img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 3px 6px var(--shadow);
+    border-radius: 50%;
+}
+
+
+form.config-form {
+    width: calc(100% - 208px);
+}
+
+form.config-form div.config-dato {
+    margin-bottom: 12px;
+}
+
+form.config-form .config-dato .dato-nombre {
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form.config-form .config-dato input,
+form.config-form .config-dato textarea,
+form.config-form .config-dato select {
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid var(--dark-gris);
+    /* border-radius: 15px; */
+    width: 50%;
+    pointer-events: none;
+}
+
+form.config-form .config-dato textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form.config-form .config-dato input:focus,
+form.config-form .config-dato textarea:focus,
+form.config-form .config-dato select:focus {
+    border: 1px solid var(--point-naranja);
+}
+
+form.config-form .config-dato span.dato-cambiar {
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: underline;
+    margin: 0 5px;
+}
+
+form.config-form .config-dato span.dato-ok {
+    display: none;
+    background: var(--main-rojo);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 10px;
+}

@@ -91,6 +91,43 @@ if(nuevaOfertaIcon) {
 }
 
 
+// ######### configuracion
+// form controlador
+// ###########################################
+
+
+const datoCambiar = document.querySelectorAll(".dato-cambiar");
+
+if(datoCambiar) {
+
+    datoCambiar.forEach((element) => {
+
+        element.addEventListener("click", (ev) => {
+
+            // console.log(ev.target.parentElement.firstElementChild);
+
+            const targetNombre = ev.target.parentElement.firstElementChild;
+            const targetInput = ev.target.parentElement.childNodes[3];
+            const okBtn = ev.target.parentElement.childNodes[7];
+
+            targetNombre.style.color = "var(--point-naranja)";
+            targetInput.style.pointerEvents = "all";
+            targetInput.focus();
+            // targetInput.value = "";
+            ev.target.style.display = "none";
+            okBtn.style.display = "inline";
+
+            if(!targetInput.focus()) {
+                targetInput.focusout();
+                targetInput.value = targetInput.value;
+            }
+
+        });
+
+    });
+
+}
+
 
 
 
