@@ -1811,17 +1811,6 @@ div.modal-borrar .borrar-botones button:hover {
 ################## configuracion
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
-input.test {
-    border: 0;
-    background: transparent;
-    pointer-events: none;
-    
-}
-
-span.testspan {
-    cursor: pointer;
-}
-
 
 div.config-contenedor {
     display: flex;
@@ -1833,6 +1822,11 @@ div.config-contenedor {
     margin-right: 4rem;
     width: 160px;
     height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .config-perfil-foto img {
@@ -1840,15 +1834,48 @@ div.config-contenedor {
     height: 100%;
     box-shadow: 0 3px 6px var(--shadow);
     border-radius: 50%;
+    margin-bottom: 1rem;
 }
 
+.config-perfil-foto input#perfil-logo-upload {
+    display: none;
+}
+
+.config-perfil-foto label.logo-upload-btn {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* .config-perfil-foto:hover::after {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-color: rgba(0,0,0,0.55);
+    background-image: url("../../imgs/dashboard-imgs/configuracion.svg");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    cursor: pointer;
+} */
+
+
+
+/* configuracion form */
 
 form.config-form {
     width: calc(100% - 208px);
 }
 
 form.config-form div.config-dato {
-    margin-bottom: 12px;
+    margin-bottom: 1rem;
 }
 
 form.config-form .config-dato .dato-nombre {
@@ -1857,9 +1884,22 @@ form.config-form .config-dato .dato-nombre {
     margin-bottom: 5px;
 }
 
+form.config-form .confir-pwd-input, 
+form.config-form .confir-error {
+    display: none;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+form.config-form .confir-error {
+    font-size: 0.9rem;
+    color: var(--main-rojo);
+}
+
+
+
 form.config-form .config-dato input,
-form.config-form .config-dato textarea,
-form.config-form .config-dato select {
+form.config-form .config-dato textarea {
     padding: 10px;
     border: 0;
     border-bottom: 1px solid var(--dark-gris);
@@ -1868,9 +1908,16 @@ form.config-form .config-dato select {
     pointer-events: none;
 }
 
+form.config-form .config-dato .config-select {
+    padding: 5px;
+    width: 50%;
+}
+
 form.config-form .config-dato textarea {
     resize: vertical;
     min-height: 100px;
+    font-family: var(--roboto);
+
 }
 
 form.config-form .config-dato input:focus,
@@ -1879,14 +1926,17 @@ form.config-form .config-dato select:focus {
     border: 1px solid var(--point-naranja);
 }
 
-form.config-form .config-dato span.dato-cambiar {
+form.config-form .config-dato span.dato-cambiar,
+form.config-form .config-dato span.password-cambiar,
+.config-dato label.dato-cambiar-label {
     font-size: 0.8rem;
     cursor: pointer;
     text-decoration: underline;
     margin: 0 5px;
 }
 
-form.config-form .config-dato span.dato-ok {
+form.config-form .config-dato span.dato-ok,
+form.config-form .config-dato span.password-ok {
     display: none;
     background: var(--main-rojo);
     color: #fff;
@@ -1895,4 +1945,48 @@ form.config-form .config-dato span.dato-ok {
     text-align: center;
     cursor: pointer;
     margin: 0 10px;
+}
+
+
+.config-dato span.config-help {
+    font-size: 0.8rem;
+    color: var(--dark-gris);
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.config-dato input#dato-foto-portada {
+    display: none;
+}
+
+.config-dato div.dato-foto-portada {
+    width: 50%;
+    height: 150px;
+    display: inline-block;
+}
+.config-dato div.dato-foto-portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+div.config-botones {
+    width: 50%;
+    margin-top: 2rem;
+}
+
+div.config-botones .config-btn-guardar {
+    width: 100%;
+    background: var(--point-naranja);
+    border: 0;
+    border-radius: 15px;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+div.config-botones .config-btn-guardar:hover {
+    box-shadow: 0 3px 6px var(--shadow);
+    background: var(--main-rojo);
 }

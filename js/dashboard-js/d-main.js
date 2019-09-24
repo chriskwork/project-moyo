@@ -104,23 +104,29 @@ if(datoCambiar) {
 
         element.addEventListener("click", (ev) => {
 
-            // console.log(ev.target.parentElement.firstElementChild);
+            console.log(ev.target.parentElement.children);
 
             const targetNombre = ev.target.parentElement.firstElementChild;
-            const targetInput = ev.target.parentElement.childNodes[3];
-            const okBtn = ev.target.parentElement.childNodes[7];
+            const targetInput = ev.target.parentElement.children[1];
+            const okBtn = ev.target.parentElement.children[3];
 
             targetNombre.style.color = "var(--point-naranja)";
             targetInput.style.pointerEvents = "all";
             targetInput.focus();
             // targetInput.value = "";
             ev.target.style.display = "none";
-            okBtn.style.display = "inline";
+            okBtn.style.display = "inline-block";
 
-            if(!targetInput.focus()) {
-                targetInput.focusout();
+            okBtn.addEventListener("click", () => {
+                
+                targetNombre.style.color = "var(--font-color)";
                 targetInput.value = targetInput.value;
-            }
+                targetInput.style.pointerEvents = "none";
+                targetInput.blur();
+                ev.target.style.display = "inline-block";
+                okBtn.style.display = "none";
+
+            });
 
         });
 
@@ -128,7 +134,58 @@ if(datoCambiar) {
 
 }
 
+// cambiar contraseña evento
 
+const cambiarPwd = document.querySelector(".password-cambiar");
+
+if(cambiarPwd) {
+    cambiarPwd.addEventListener("click", (ev) => {
+    
+        // console.log(ev.target.parentElement.children);
+
+        const confirmarInput = document.querySelector(".confir-pwd-input");
+        const targetNombre = ev.target.parentElement.firstElementChild;
+        let targetInput = ev.target.parentElement.children[1];
+        let okBtn = ev.target.parentElement.children[4];
+
+        confirmarInput.style.display = "inline-block";
+        ev.target.style.display = "none";
+        targetNombre.style.color = "var(--point-naranja)";
+        targetInput.style.pointerEvents = "all";
+        confirmarInput.style.pointerEvents = "all";
+        targetInput.focus();
+        okBtn.style.display = "inline-block";
+
+
+        okBtn.addEventListener("click", () => {
+
+            // confirmar valores de contraseña input
+            if(targetInput.value != confirmarInput.value) {
+
+                confirmarInput.value = "";
+                confirmarInput.placeholder = "* Debes poner la misma contraseña";
+                okBtn.style.display = "inline-block";
+                ev.target.style.display = "none";
+                targetInput.style.pointerEvents = "all";
+                
+            }else {
+
+                targetNombre.style.color = "var(--font-color)";
+                targetInput.value = targetInput.value;
+                confirmarInput.value = confirmarInput.value;
+                targetInput.style.pointerEvents = "none";
+                confirmarInput.style.pointerEvents = "none";
+                targetInput.blur();
+                confirmarInput.blur();
+                ev.target.style.display = "inline-block";
+                okBtn.style.display = "none";
+
+            }
+        });
+
+    });
+
+};
 
 
 

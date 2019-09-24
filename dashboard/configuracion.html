@@ -88,7 +88,10 @@
             <div class="config-contenedor">
 
                 <div class="config-perfil-foto">
-                    <img src="../imgs/dashboard-imgs/fakelogo.png" alt="">
+                    <img class="perfil-logo" src="../imgs/dashboard-imgs/fakelogo.png" alt="">
+                    
+                    <input type="file" name="" id="perfil-logo-upload">
+                    <label for="perfil-logo-upload" class="logo-upload-btn">Cambiar</label>
                 </div>
                 
                 <form class="config-form" action="" method="POST">
@@ -108,8 +111,19 @@
                     </div>
 
                     <div class="config-dato">
+                        <p class="dato-nombre">Contraseña</p>
+                        <input type="password" class="config-input" value="past password" />
+
+                        <input type="password" class="confir-pwd-input" value="" placeholder="Confirmar la contraseña"/>
+                        <!-- <span class="confir-error"></span> -->
+                        
+                        <span class="password-cambiar">Cambiar</span>
+                        <span class="password-ok">Ok</span>
+                    </div>
+
+                    <div class="config-dato">
                         <p class="dato-nombre">Web</p>
-                        <input type="text" class="config-input" value="https://fakenight.com" />
+                        <input type="text" class="config-input" value="https://fakenight.com" autofocus />
                         <span class="dato-cambiar">Cambiar</span>
                         <span class="dato-ok">Ok</span>
                     </div>
@@ -165,7 +179,7 @@
 
                     <div class="config-dato">
                         <p class="dato-nombre">Categoria de Negocio</p>
-                        <select name="" id="" class="config-input">
+                        <select name="" id="" class="config-select">
                             <option value="hotel">hotel, restaurante</option>
                             <option value="viaje">viaje</option>
                             <option value="coche">coche</option>
@@ -182,7 +196,7 @@
                     <div class="config-dato">
                         <p class="dato-nombre">Foto portada</p>
                         <div class="dato-foto-portada">
-                            <!-- <img src="../imgs/dashboard-imgs/portada.jpg" alt=""> -->
+                            <img src="../imgs/dashboard-imgs/portada.jpg" alt="">
                         </div>
                         <input type="file" name="" id="dato-foto-portada" />
                         <label for="dato-foto-portada" class="dato-cambiar-label">Cambiar</span>
