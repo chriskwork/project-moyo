@@ -1,984 +1,938 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap");
 
 :root {
-    --blanco: #fff;
-    --main-rojo: #F64747;
-    --border-color: #C9C9C9;
-    --font-color: #333;
-    --width: 1366px;
-    --dark-gris: #aaaaaa;
-    --point-naranja: #f0a721;
-    --point-morado: #a157e3;
-    --light-gris: rgb(230, 230, 230);
-    --shadow: rgba(172, 90, 90, 0.15);
-    --roboto: 'Roboto', Arial, sans-serif;
-    --montserrat: 'Montserrat', sans-serif;
+  --blanco: #fff;
+  --main-rojo: #f64747;
+  --border-color: #c9c9c9;
+  --font-color: #333;
+  --width: 1366px;
+  --dark-gris: #aaaaaa;
+  --point-naranja: #f0a721;
+  --point-morado: #a157e3;
+  --light-gris: rgb(230, 230, 230);
+  --shadow: rgba(172, 90, 90, 0.15);
+  --roboto: "Roboto", Arial, sans-serif;
+  --montserrat: "Montserrat", sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
 }
 
 body {
-    font-family: var(--roboto);
-    line-height: 1.6;
-    color: rgb(24, 24, 24);
+  font-family: var(--roboto);
+  line-height: 1.6;
+  color: rgb(24, 24, 24);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* ################################# header CSS  */
 
 header.index-header {
-    width: 100%;
-    height: 650px;
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3), rgba(161, 87, 227, 0.6)), url('../imgs/header/main-foto-low.jpg');
-    background-size: cover;
-    /* background-position-y: -100px; */
-    background-repeat: no-repeat;
+  width: 100%;
+  height: 650px;
+  background-image: linear-gradient(
+      to bottom,
+      rgb(0, 0, 0, 0.3),
+      rgba(161, 87, 227, 0.6)
+    ),
+    url("../imgs/header/main-foto-low.jpg");
+  background-size: cover;
+  /* background-position-y: -100px; */
+  background-repeat: no-repeat;
 }
 
 header .header-contenedor {
-    max-width: var(--width);
-    height: 100%;
-    margin: 0 auto;
+  max-width: var(--width);
+  height: 100%;
+  margin: 0 auto;
 }
 
-header .logo-contenedor, .docu-logo-contenedor {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 5%;
+header .logo-contenedor,
+.docu-logo-contenedor {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
 }
 
-header .div-logo, .docu-div-logo {
-    flex: 1;
-    display: flex;
-    align-items: center;
+header .div-logo,
+.docu-div-logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 header .logo {
-    width: 60px;
-    height: 60px;
-    margin-right: 1rem;
+  width: 60px;
+  height: 60px;
+  margin-right: 1rem;
 }
 
-header .div-logo h2, .footer-logo-text h2,
+header .div-logo h2,
+.footer-logo-text h2,
 .docu-div-logo h2 {
-    font-family: var(--montserrat);
-    font-weight: 400;
+  font-family: var(--montserrat);
+  font-weight: 400;
 }
 
 header .div-logo h2 a {
-    color: var(--blanco);
+  color: var(--blanco);
 }
 
 /* // boton iniciar sesion */
 
-header .div-text-iniciar, .docu-text-iniciar {
-    flex: 1;
-    text-align: right;
+header .div-text-iniciar,
+.docu-text-iniciar {
+  flex: 1;
+  text-align: right;
 }
 
-header .div-text-iniciar a {
-    font-size: 0.9rem;
-    border: 1px solid var(--main-rojo);
-    border-radius: 15px;
-    padding: 0.5rem 2rem;
-    color: var(--blanco);
-    transition: all 0.2s;
+header .div-text-iniciar a:last-child {
+  font-size: 0.9rem;
+  border: 1px solid var(--main-rojo);
+  border-radius: 15px;
+  padding: 0.5rem 2rem;
+  color: var(--blanco);
+  transition: all 0.2s;
 }
 
 header .div-text-iniciar a:hover {
-    background: rgba(246, 71, 71, 0.4);
+  background: rgba(246, 71, 71, 0.4);
+}
+
+header .div-text-iniciar .portfolio-link-to {
+  border: 0;
+  text-decoration: underline;
+  margin: 0 1rem;
+  color: var(--blanco);
+  font-size: 0.9rem;
 }
 
 /* // header copy */
 
 header .copy-contenedor {
-    width: 100%;
-    height: calc(100% - 80px);
-    padding: 0 5%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
+  width: 100%;
+  height: calc(100% - 80px);
+  padding: 0 5%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 }
 
 header .copy-contenedor h1 {
-    margin-bottom: 5rem;
-    color: var(--blanco);
-    font-size: 3rem;
-    letter-spacing: 1px;
+  margin-bottom: 5rem;
+  color: var(--blanco);
+  font-size: 3rem;
+  letter-spacing: 1px;
 }
 
 .registrar-boton {
-    padding: 1rem 3rem;
-    background: var(--main-rojo);
-    border-radius: 20px;
-    color: var(--blanco);
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
-    font-size: 1.2rem;
-    transition: background 0.2s;
+  padding: 1rem 3rem;
+  background: var(--main-rojo);
+  border-radius: 20px;
+  color: var(--blanco);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+  transition: background 0.2s;
 }
 
 .registrar-boton:hover {
-    background: var(--point-morado);
+  background: var(--point-morado);
 }
 
 header .copy-contenedor .div-text-iniciar-responsive-sm {
-    display: none;
+  display: none;
 }
-
 
 /* ################################# section CSS  */
 
 /* // tarjetas */
 
 section.index-section {
-    width: 100%;
-    height: auto;
-    margin-top: 3rem;
+  width: 100%;
+  height: auto;
+  margin-top: 3rem;
 }
 
 section .tarjetas {
-    max-width: var(--width);
-    height: auto;
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1.5rem auto 3rem auto;
+  max-width: var(--width);
+  height: auto;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem auto 3rem auto;
 }
 
 section .tarjetas .tarjeta {
-    width: 300px;
-    height: 300px;
-    padding: 3%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    margin-right: 10px;
+  width: 300px;
+  height: 300px;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-right: 10px;
 }
 
 section .tarjetas .tarjeta:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
-section .tarjetas .tarjeta div, section .tarjetas .tarjeta h3 {
-    margin-bottom: 1rem;
+section .tarjetas .tarjeta div,
+section .tarjetas .tarjeta h3 {
+  margin-bottom: 1rem;
 }
 
 section .tarjetas .tarjeta div {
-    width: 90px;
-    height: 90px;
+  width: 90px;
+  height: 90px;
 }
 
 section .tarjetas .tarjeta div img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* // como funciona */
 
 section .comofunciona {
-    width: 100%;
-    height: 400px;
-    background-image: url('../imgs/section/naranja-icon.svg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-bottom: 3rem;
+  width: 100%;
+  height: 400px;
+  background-image: url("../imgs/section/naranja-icon.svg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
 }
 
 section .comofunciona h2 {
-    font-size: 2rem;
-    font-family: var(--montserrat);
-    font-weight: bold;
+  font-size: 2rem;
+  font-family: var(--montserrat);
+  font-weight: bold;
 }
 
 section .comofunciona-tarjeta-contenedor {
-    width: 80%;
-    max-width: var(--width);
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 80%;
+  max-width: var(--width);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 section .comofunciona .comofunciona-tarjeta {
-    width: 320px;
-    height: 250px;
-    padding: 10px 0;
-    text-align: center;
+  width: 320px;
+  height: 250px;
+  padding: 10px 0;
+  text-align: center;
 }
 
 section .comofunciona-tarjeta .comofunciona-imgs {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 15px;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 15px;
 }
 
 section .comofunciona-tarjeta h3 {
-    margin-bottom: 15px;
-    font-family: var(--montserrat);
-    font-weight: bold;
+  margin-bottom: 15px;
+  font-family: var(--montserrat);
+  font-weight: bold;
 }
 
 section .comofunciona-tarjeta p {
-    padding: 0 10px;
-    color: var(--blanco);
+  padding: 0 10px;
+  color: var(--blanco);
 }
 
 section .comofunciona-tarjeta .tienda-app {
-    width: 50%;
-    margin: 10px auto;
+  width: 50%;
+  margin: 10px auto;
 }
 
 section .comofunciona-tarjeta .appstore-icons {
-    margin: 0 10px;
+  margin: 0 10px;
 }
-
 
 /* // asi quedaria tu anuncio */
 
-
 .asi-tu-anuncio {
-    max-width: var(--width);
-    padding: 0 5%;
-    margin: 0 auto 3rem auto;
+  max-width: var(--width);
+  padding: 0 5%;
+  margin: 0 auto 3rem auto;
 }
 
 .asi-tu-anuncio h3 {
-    font-family: var(--montserrat);
+  font-family: var(--montserrat);
 }
 
 .asi-tu-anuncio .anuncio-tarjeta-contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .asi-tu-anuncio .anuncio-tarjeta {
-    display: flex;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    width: 49%;
-    /* min-width: 400px; */
-    height: auto;
-    padding: 0.5rem;
-    margin: 10px 0;
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  width: 49%;
+  /* min-width: 400px; */
+  height: auto;
+  padding: 0.5rem;
+  margin: 10px 0;
 }
 
 .asi-tu-anuncio .anuncio-tarjeta .anuncio-img {
-    flex: 1;
-    width: 280px;
-    height: 220px;
-    margin-right: 10px;
+  flex: 1;
+  width: 280px;
+  height: 220px;
+  margin-right: 10px;
 }
 
 .asi-tu-anuncio .anuncio-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .asi-tu-anuncio .anuncio-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .asi-tu-anuncio .anuncio-info .mini-title {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    /* margin-bottom: 10px; */
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  /* margin-bottom: 10px; */
 }
 
 .asi-tu-anuncio .anuncio-info .oferta {
-    color: var(--main-rojo);
-    font-weight: bold;
-    /* margin-bottom: 10px; */
+  color: var(--main-rojo);
+  font-weight: bold;
+  /* margin-bottom: 10px; */
 }
 
 .asi-tu-anuncio .anuncio-info .descripcion {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .asi-tu-anuncio .anuncio-info .precio {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: none;
 }
 
 .anuncio-info .precio p {
-    font-size: 2rem;
-    font-weight: bold;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .anuncio-info .precio span {
-    color: #b4b4b4;
-    font-size: 0.8rem;
+  color: #b4b4b4;
+  font-size: 0.8rem;
 }
 
 .anuncio-info .precio svg {
-    fill: var(--blanco);
-    width: 35px;
-    height: 35px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: all 0.3s;
+  fill: var(--blanco);
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .anuncio-info .precio svg:hover {
-    transform: scale(1.1);
-    fill: #f0a340;
+  transform: scale(1.1);
+  fill: #f0a340;
 }
-
 
 /* // unete triunfo.com */
 
 section .unete-caja {
-    width: 100%;
-    height: 150px;
-    background-image: linear-gradient(to right, var(--main-rojo), rgb(255, 190, 68));
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 150px;
+  background-image: linear-gradient(
+    to right,
+    var(--main-rojo),
+    rgb(255, 190, 68)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 section .unete-caja h1 {
-    color: var(--blanco);
-    font-size: 2.5rem;
-    margin-right: 2rem;
+  color: var(--blanco);
+  font-size: 2.5rem;
+  margin-right: 2rem;
 }
-
 
 /* // quieres ayuda */
 
 section .ayuda-cuenta {
-    width: 100%;
-    height: 400px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url('../imgs/section/ayuda-cliente.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 2rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 400px;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.65),
+      rgba(255, 255, 255, 0.65)
+    ),
+    url("../imgs/section/ayuda-cliente.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section .ayuda-cuenta .ayuda-texto-contenedor {
-    width: 70%;
-    height: 70%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
 
 .ayuda-texto-contenedor h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .ayuda-texto-contenedor .ayuda-boton a {
-    border: 1px solid var(--main-rojo);
-    border-radius: 20px;
-    padding: 1rem 2rem;
-    color: var(--main-rojo);
-    transition: all 0.2s;
+  border: 1px solid var(--main-rojo);
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  color: var(--main-rojo);
+  transition: all 0.2s;
 }
 
 .ayuda-texto-contenedor .ayuda-boton a:hover {
-    background: var(--blanco);
-    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+  background: var(--blanco);
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
 }
-
 
 /* ################################# footer CSS  */
 
 footer {
-    width: 100%;
-    height: 180px;
-    padding: 2rem 0;
-    background-color: #333;
-    color: var(--blanco);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 180px;
+  padding: 2rem 0;
+  background-color: #333;
+  color: var(--blanco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-footer .parte-logo, footer .parte-enlaces {
-    width: 40%;
-    height: 100%;
+footer .parte-logo,
+footer .parte-enlaces {
+  width: 40%;
+  height: 100%;
 }
 
 footer .parte-logo {
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 }
 
 .footer-logo {
-    width: 70px;
-    height: 70px;
-    margin-right: 15px;
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
 }
 
 .footer-logo-text {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-logo-text .footer-small {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 footer .social-media-icon {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 footer .social-media-icon svg {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    fill: var(--blanco);
-    transition: all 0.3s;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  fill: var(--blanco);
+  transition: all 0.3s;
 }
 
 footer .social-media-icon svg:hover {
-    fill: var(--main-rojo);
+  fill: var(--main-rojo);
 }
 
 footer .parte-enlaces {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 footer .parte-enlaces .enlace-inicio {
-    color: var(--main-rojo);
+  color: var(--main-rojo);
 }
 
 footer .parte-enlaces .enlaces-politicas {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin: 10px 0;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 10px 0;
 }
 
 .enlaces-politicas p::after {
-    content: '|';
-    margin: 0 10px;
+  content: "|";
+  margin: 0 10px;
 }
 
 .enlaces-politicas p:last-child::after {
-    content: '';
+  content: "";
 }
 
 .enlaces-politicas a {
-    color: var(--blanco);
+  color: var(--blanco);
 }
 
 .enlaces-politicas a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .copyright {
-    color: #b4b4b4;
-    font-size: 0.7rem;
+  color: #b4b4b4;
+  font-size: 0.7rem;
 }
 
 /* ===================================================================
 index.html css hasta aqui
 =================================================================== */
 
-
 /* ################################# documentos CSS
     => preguntas, politicas, contacto etc */
 
 .docu-index-header {
-    width: 100%;
-    height: 80px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .docu-div-logo h2 a {
-    color: #333;
+  color: #333;
 }
 
 .docu-text-iniciar a {
-    font-size: 0.9rem;
-    border: 1px solid var(--main-rojo);
-    border-radius: 15px;
-    padding: 0.5rem 2rem;
-    color: var(--main-rojo);
-    transition: all 0.2s;
+  font-size: 0.9rem;
+  border: 1px solid var(--main-rojo);
+  border-radius: 15px;
+  padding: 0.5rem 2rem;
+  color: var(--main-rojo);
+  transition: all 0.2s;
 }
 
 .docu-text-iniciar a:hover {
-    background: var(--main-rojo);
-    color: var(--blanco);
+  background: var(--main-rojo);
+  color: var(--blanco);
 }
-
 
 /* =============================================================== */
 /* ################################# panel de precio CSS */
 /* =============================================================== */
 
 div.panel-precio-contenedor {
-    width: 100%;
-    height: auto;
-    display: flex;
-    margin-top: 2rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 2rem;
 }
 
 div.panel-precio-card {
-    width: 260px;
-    margin-right: 1rem;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 0 3px 6px var(--shadow);
+  width: 260px;
+  margin-right: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 6px var(--shadow);
 }
 
 div.panel-precio-card:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
-
 .panel-opcion {
-    font-family: var(--montserrat);
-    font-weight: bold;
-    font-size: 1.2rem;
-    height: 80px;
-    border-radius: 10px 10px 0 0;
+  font-family: var(--montserrat);
+  font-weight: bold;
+  font-size: 1.2rem;
+  height: 80px;
+  border-radius: 10px 10px 0 0;
 }
 
 .panel-opcion.gratis {
-    background: radial-gradient(circle at top left, #fff, var(--point-naranja));
+  background: radial-gradient(circle at top left, #fff, var(--point-naranja));
 }
 
 .panel-opcion.profesional {
-    background: radial-gradient(circle at top left, #fff, var(--main-rojo));
+  background: radial-gradient(circle at top left, #fff, var(--main-rojo));
 }
 
 .panel-opcion.premium {
-    background: radial-gradient(circle at top left, #fff, var(--point-morado));
-    position: relative;
+  background: radial-gradient(circle at top left, #fff, var(--point-morado));
+  position: relative;
 }
 
 .bestValue {
-    position: absolute;
-    font-family: var(--roboto);
-    color: #fff;
-    font-weight: normal;
-    background: rgb(56, 139, 216);
-    font-size: 0.7rem;
-    padding: 3px 15px;
-    box-shadow: 0 3px 6px var(--shadow);
-    top: -10px;
-    right: 0;
-    /* border-radius: 0 10px 0 0; */
+  position: absolute;
+  font-family: var(--roboto);
+  color: #fff;
+  font-weight: normal;
+  background: rgb(56, 139, 216);
+  font-size: 0.7rem;
+  padding: 3px 15px;
+  box-shadow: 0 3px 6px var(--shadow);
+  top: -10px;
+  right: 0;
+  /* border-radius: 0 10px 0 0; */
 }
 
-
-
-
-.panel-opcion, .panel-precio {
-    display: flex;
-    justify-content: center;
+.panel-opcion,
+.panel-precio {
+  display: flex;
+  justify-content: center;
 }
 
 .panel-opcion {
-    align-items: center;
+  align-items: center;
 }
 
 .panel-precio {
-    font-size: 3rem;
-    align-items: baseline;
+  font-size: 3rem;
+  align-items: baseline;
 }
 
 .panel-precio span.euro {
-    font-size: 1.5rem;
-    margin-right: 10px;
+  font-size: 1.5rem;
+  margin-right: 10px;
 }
 
 .panel-precio span.mes {
-    font-size: 1rem;
-    color: var(--dark-gris);
+  font-size: 1rem;
+  color: var(--dark-gris);
 }
 
 .panel-incluido {
-    padding: 0 1.5rem;
-    font-size: 0.8rem;
-    height: 160px;
-    color: #575757;
+  padding: 0 1.5rem;
+  font-size: 0.8rem;
+  height: 160px;
+  color: #575757;
 }
 
 .panel-incluido ul li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .panel-incluido ul li::before {
-    content: "\2022";
-    font-weight: bold;
-    display: inline-block;
-    width: 1rem;
-    margin-left: -1em;
+  content: "\2022";
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+  margin-left: -1em;
 }
 
 .panel-incluido .gratis-list li::before {
-    color: var(--point-naranja);
+  color: var(--point-naranja);
 }
 
 .panel-incluido .profesional-list li::before {
-    color: var(--main-rojo);
+  color: var(--main-rojo);
 }
 
 .panel-incluido .premium-list li::before {
-    color: var(--point-morado);
+  color: var(--point-morado);
 }
 
-
-
 .panel-precio-card .panel-boton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .panel-precio-card .panel-boton a {
-    width: 100%;
-    height: 100%;
-    padding: 0.5rem;
-    text-align: center;
-    background: rgb(211, 211, 211);
-    border-radius: 0 0 10px 10px;
-    font-size: 0.8rem;
-    color: var(--font-color);
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  background: rgb(211, 211, 211);
+  border-radius: 0 0 10px 10px;
+  font-size: 0.8rem;
+  color: var(--font-color);
 }
 
 .panel-precio-card .panel-boton a span.boton-icon {
-    display: none;
-    margin-right: 5px;
+  display: none;
+  margin-right: 5px;
 }
 
 .panel-precio-card .panel-boton a:hover span.boton-icon {
-    display: inline-block;
+  display: inline-block;
 }
 
-
 .panel-precio-card .panel-boton a.boton-gratis:hover {
-    background: var(--point-naranja);
+  background: var(--point-naranja);
 }
 
 .panel-precio-card .panel-boton a.boton-pro:hover {
-    background: var(--main-rojo);
+  background: var(--main-rojo);
 }
 
 .panel-precio-card .panel-boton a.boton-premium:hover {
-    background: var(--point-morado);
+  background: var(--point-morado);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ===================================================================
 RESPONSIVE
 =================================================================== */
 
-
 /* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 768px */
 
 @media screen and (max-width: 768px) {
+  header.index-header {
+    background-position: center;
+  }
 
-    header.index-header {
-        background-position: center;
-    }
+  header .logo-contenedor {
+    height: 120px;
+    /* align-items: flex-end; */
+  }
 
-    header .logo-contenedor {
-        height: 120px;
-        /* align-items: flex-end; */
-    }
+  header .copy-contenedor {
+    align-items: center;
+  }
 
-    header .copy-contenedor {
-        align-items: center;
-    }
+  header .copy-contenedor h1 {
+    text-align: center;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  }
 
-    header .copy-contenedor h1 {
-        text-align: center;
-        text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-    }
+  /* // tarjetas */
 
-    /* // tarjetas */
+  section .tarjetas {
+    flex-direction: column;
+  }
 
-    section .tarjetas {
-        flex-direction: column;
-    }
+  section .tarjetas .tarjeta {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 
-    section .tarjetas .tarjeta {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
+  section .tarjetas .tarjeta:last-child {
+    margin-bottom: 0;
+  }
 
-    section .tarjetas .tarjeta:last-child {
-        margin-bottom: 0;
-    }
+  /* // como funciona */
 
-    /* // como funciona */
+  section .comofunciona {
+    height: auto;
+    padding: 1rem 0;
+  }
 
-    section .comofunciona {
-        height: auto;
-        padding: 1rem 0;
-    }
+  section .comofunciona-tarjeta-contenedor {
+    flex-direction: column;
+  }
 
-    section .comofunciona-tarjeta-contenedor {
-        flex-direction: column;
-    }
+  section .comofunciona h2 {
+    margin: 1rem 0 2rem 0;
+  }
 
-    section .comofunciona h2 {
-        margin: 1rem 0 2rem 0;
-    }
+  section .comofunciona .comofunciona-tarjeta {
+    width: 100%;
+  }
 
-    section .comofunciona .comofunciona-tarjeta {
-        width: 100%;
-    }
+  /* tu anuncio */
 
+  .asi-tu-anuncio h3.asi-tu-anuncio-maintitle {
+    text-align: center;
+    font-size: 1.8rem;
+  }
 
-    /* tu anuncio */
+  .asi-tu-anuncio .anuncio-tarjeta {
+    width: 100%;
+  }
 
-    .asi-tu-anuncio h3.asi-tu-anuncio-maintitle {
-        text-align: center;
-        font-size: 1.8rem;
-    }
+  .asi-tu-anuncio .anuncio-info .title,
+  .asi-tu-anuncio .anuncio-info .oferta {
+    text-align: center;
+  }
 
-    .asi-tu-anuncio .anuncio-tarjeta {
-        width: 100%;
-    }
+  /* unete triunfo.com */
 
-    .asi-tu-anuncio .anuncio-info .title,
-    .asi-tu-anuncio .anuncio-info .oferta {
-        text-align: center;
-    }
-    
-    /* unete triunfo.com */
+  section .unete-caja {
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+  }
 
-    section .unete-caja {
-        flex-direction: column;
-        padding-bottom: 0.5rem;
-    }
-    
+  /* // quieres ayuda */
 
-    /* // quieres ayuda */
+  section .ayuda-cuenta {
+    height: auto;
+  }
 
-    section .ayuda-cuenta {
-        height: auto;
-    }
+  section .ayuda-cuenta .ayuda-texto-contenedor {
+    width: 80%;
+    height: auto;
+  }
 
-    section .ayuda-cuenta .ayuda-texto-contenedor {
-        width: 80%;
-        height: auto;
-    }
+  .ayuda-texto-contenedor .ayuda-boton {
+    margin: 2rem 0;
+  }
 
-    .ayuda-texto-contenedor .ayuda-boton {
-        margin: 2rem 0;
-    }
+  /* ################################# footer CSS  */
 
-    /* ################################# footer CSS  */
+  footer {
+    flex-direction: column;
+    height: auto;
+  }
 
-    footer {
-        flex-direction: column;
-        height: auto;
-    }
+  footer .parte-logo,
+  footer .parte-enlaces {
+    width: 80%;
+    justify-content: center;
+  }
 
-    footer .parte-logo, footer .parte-enlaces {
-        width: 80%;
-        justify-content: center;
-    }
+  footer .parte-logo {
+    border-bottom: 1px solid rgb(201, 201, 201, 0.5);
+    padding-bottom: 3rem;
+  }
 
-    footer .parte-logo {
-        border-bottom: 1px solid rgb(201, 201, 201, 0.5);
-        padding-bottom: 3rem;
-    }
+  footer .parte-enlaces {
+    text-align: center;
+    margin-top: 2rem;
+  }
 
-    footer .parte-enlaces {
-        text-align: center;
-        margin-top: 2rem;
-    }
-
-    footer .parte-enlaces .enlaces-politicas {
-        align-items: center;
-        justify-content: center;
-    }
-
-
+  footer .parte-enlaces .enlaces-politicas {
+    align-items: center;
+    justify-content: center;
+  }
 }
-
 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 414px */
 
-
 @media screen and (max-width: 414px) {
+  header.index-header {
+    height: 100vh;
+  }
 
-    header.index-header {
-        height: 100vh;
-    }
+  header .logo-contenedor {
+    align-items: flex-end;
+  }
 
-    header .logo-contenedor {
-        align-items: flex-end;
-    }
+  header .header-contenedor .div-text-iniciar {
+    display: none;
+  }
 
-    header .header-contenedor .div-text-iniciar {
-        display: none;
-    }
+  header .header-contenedor .div-logo {
+    justify-content: center;
+  }
 
-    header .header-contenedor .div-logo {
-        justify-content: center;
-    }
+  header .copy-contenedor {
+    align-items: center;
+    padding: 0 5%;
+  }
 
-    header .copy-contenedor {
-        align-items: center;
-        padding: 0 5%;
-    }
+  header .copy-contenedor h1 {
+    font-size: 2.5rem;
+    padding: 0 20%;
+    margin-bottom: 3rem;
+  }
 
-    header .copy-contenedor h1 {
-        font-size: 2.5rem;
-        padding: 0 20%;
-        margin-bottom: 3rem;
-    }
+  header .copy-contenedor .div-text-iniciar-responsive-sm {
+    display: block;
+    margin-top: 3rem;
+  }
 
-    header .copy-contenedor .div-text-iniciar-responsive-sm {
-        display: block;
-        margin-top: 3rem;
-    }
+  header .copy-contenedor .div-text-iniciar-responsive-sm a {
+    color: var(--blanco);
+  }
 
-    header .copy-contenedor .div-text-iniciar-responsive-sm a {
-        color: var(--blanco);
-    }
+  /* // tarjetas */
 
-    /* // tarjetas */
+  section .tarjetas .tarjeta {
+    height: auto;
+  }
 
-    section .tarjetas .tarjeta {
-        height: auto;
-    }
+  /* // como funciona */
 
+  section .comofunciona h2 {
+    margin: 1rem 0 2rem 0;
+  }
 
-    /* // como funciona */
+  section .comofunciona .comofunciona-tarjeta {
+    height: auto;
+  }
 
-    section .comofunciona h2 {
-        margin: 1rem 0 2rem 0;
-    }
+  /* tu anuncio */
 
-    section .comofunciona .comofunciona-tarjeta {
-        height: auto;
-    }
+  .asi-tu-anuncio .anuncio-tarjeta {
+    width: 100%;
+    flex-direction: column;
+  }
 
+  .asi-tu-anuncio .anuncio-tarjeta-contenedor {
+    width: 100%;
+    min-width: auto;
+    flex-direction: column;
+  }
 
-    /* tu anuncio */
+  .asi-tu-anuncio .anuncio-tarjeta .anuncio-img {
+    margin: 0 0 10px 0;
+    width: 100%;
+  }
 
+  /* unete triunfo.com */
 
-    .asi-tu-anuncio .anuncio-tarjeta {
-        width: 100%;
-        flex-direction: column;
-    }
+  section .unete-caja h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
 
-    .asi-tu-anuncio .anuncio-tarjeta-contenedor {
-        width: 100%;
-        min-width: auto;
-        flex-direction: column;
-    }
+  /* ################################# footer CSS  */
 
-    .asi-tu-anuncio .anuncio-tarjeta .anuncio-img {
-        margin: 0 0 10px 0;
-        width: 100%;
-    }
-    
-    /* unete triunfo.com */
-
-    section .unete-caja h1 {
-        font-size: 1.5rem;
-        text-align: center;
-        margin: 0 0 10px 0;
-    }
-    
-
-    /* ################################# footer CSS  */
-
-    footer .footer-small {
-        font-size: 0.7rem;
-    }
-
-
+  footer .footer-small {
+    font-size: 0.7rem;
+  }
 }
-
-
 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%% RESPONSIVE 375px */
 
-
 @media screen and (max-width: 375px) {
-
-    header .copy-contenedor h1 {
-        font-size: 2rem;
-        padding: 0 20%;
-    }
-
+  header .copy-contenedor h1 {
+    font-size: 2rem;
+    padding: 0 20%;
+  }
 }
